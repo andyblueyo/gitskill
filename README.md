@@ -1,6 +1,6 @@
 # Git Skill
 
-##Project Description
+## Project Description
 GitHub is a great way to see work someone has previously done. Public repositories allow others to explore projects as well as view how the code is written. It's a fantastic way to showcase work, especially to future employers. Our research project is focused on defining the value of GitHub, especially for students, and better understanding the implications of what being active on GitHub can mean. 
 
 Our project will be further defined by our hypothesis and its supporting questions. Our hypotheses is listed below. 
