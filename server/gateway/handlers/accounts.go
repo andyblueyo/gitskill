@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"net/http"
+	"fmt"
 )
 
 func (ctx *HandlerContext) AccountHandler(w http.ResponseWriter, r *http.Request) {
@@ -10,7 +11,12 @@ func (ctx *HandlerContext) AccountHandler(w http.ResponseWriter, r *http.Request
 		return
 	}
 	accountName := r.URL.Query().Get("account")
-	ctx.AccountsQueue <- accountName
-	msg := struct{ Message string }{"account queued successfully!"}
+	go ctx.AddAccountToChan(accountName)
+	fmt.Printf("added to queue to scrape: %s\n", accountName)
+	msg := struct{ Message string }{fmt.Sprintf("gh account: %s queued successfully!", accountName)}
 	respond(w, msg)
+}
+
+func (ctx *HandlerContext) AddAccountToChan(accountName string) {
+	ctx.AccountsQueue <- accountName
 }

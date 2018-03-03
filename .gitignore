@@ -103,3 +103,5 @@ ENV/
 # Env
 .idea/
 node_modules/
+ds/data
+scripts/data

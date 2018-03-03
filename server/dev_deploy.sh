@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+#set -e
 cd gateway
 ./build.sh
 cd -
@@ -9,14 +9,14 @@ export TLSKEY=/tls/privkey.pem
 export SESSIONKEY=shoulddesignerscode?
 
 docker rm -f git-gateway
-docker rm -f dev-mongosvr
-
-# DBs
-docker run -d \
---name dev-mongosvr  \
--p 27017:27017 \
---network dev \
-mongo
+#docker rm -f dev-mongosvr
+#
+## DBs
+#docker run -d \
+#--name dev-mongosvr  \
+#-p 27017:27017 \
+#--network dev \
+#mongo
 
 docker pull $DOCKER_USER/git-gateway
 docker run -d \
@@ -28,7 +28,7 @@ docker run -d \
 -e TLSKEY=$TLSKEY \
 -e GIT_CLIENT_ID=$GIT_CLIENT_ID \
 -e GIT_CLIENT_SECRET=$GIT_CLIENT_SECRET \
--e GHTOKEN=$GHTOKEN \
+-e GHTOKENS=$GHTOKENS \
 -e DBADDR=dev-mongosvr:27017 \
 -e SESSIONKEY=$SESSIONKEY \
 -e GOENV=PROD \

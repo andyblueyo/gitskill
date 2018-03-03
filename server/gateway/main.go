@@ -14,6 +14,8 @@ import (
 	"github.com/andyblueyo/gitskill/server/gateway/models/gh-repo"
 	"github.com/andyblueyo/gitskill/server/gateway/jobs"
 	"gopkg.in/mgo.v2"
+	"strings"
+	"sync"
 )
 
 const accountPath = "/account"
@@ -34,7 +36,8 @@ func main() {
 		addr = ":443"
 	}
 
-	token := requireEnv("GHTOKEN")
+	token := requireEnv("GHTOKENS")
+	tokens := strings.Split(token, ",")
 	clientID := requireEnv("GIT_CLIENT_ID")
 	clientSecret := requireEnv("GIT_CLIENT_SECRET")
 	dbAddr := requireEnv("DBADDR")
@@ -52,6 +55,7 @@ func main() {
 	usersStore := gh_user.NewMongoStore(sess, "git", "users")
 
 	usersToScrape := make(chan string)
+	usersToUsers := make(chan string)
 	ctx := &handlers.HandlerContext{
 		OauthConfig: &oauth2.Config{
 			ClientID:     clientID,
@@ -61,17 +65,33 @@ func main() {
 			Endpoint:     github.Endpoint,
 		},
 		StateCache:    cache.New(5*time.Minute, 10*time.Second),
-		Token:         token,
+		Tokens:        tokens,
+		TokenIndex:    0,
 		AccountsQueue: usersToScrape,
+		Mutex:         &sync.RWMutex{},
 	}
 
 	reposToScrape := make(chan gh_repo.Repo)
 	reposWithLanguages := make(chan gh_repo.Repo)
+	orgsToScrapeForMembers := make(chan string)
 
-	go jobs.ListenForAccounts(&usersToScrape, &reposToScrape, ctx.Token, usersStore)
-	go jobs.ListenForRepos(&reposToScrape, &reposWithLanguages, ctx.Token)
+	go jobs.ListenForAccounts(&usersToScrape, &reposToScrape, &orgsToScrapeForMembers, ctx, usersStore)
+	go jobs.ListenForUsersToUsers(&usersToScrape, &usersToUsers)
+	go jobs.ListenForRepos(&reposToScrape, &reposWithLanguages, ctx)
 	go jobs.ListenForReposWithLanguages(&reposWithLanguages, reposStore)
+	go jobs.ListenForOrgToScrapeMembers(&orgsToScrapeForMembers, &usersToScrape, ctx)
 
+	//orgsToScrapeForMembers <- "airbnb"
+	//usersToScrape <- "airbnb"
+	//orgsToScrapeForMembers <- "apple"
+	//
+	orgs, err := usersStore.GetAllOrgs()
+	for i := range orgs {
+		o := orgs[i]
+		orgsToScrapeForMembers <- o.GithubUsername
+	}
+
+	//orgsToScrapeForMembers <- "airbnb"
 	mux := http.NewServeMux()
 
 	//create a new handlers.CityHandler struct
@@ -83,8 +103,8 @@ func main() {
 	//is used for simple functions that conform tos the
 	//http.HandlerFunc type.
 	//see https://drstearns.github.io/tutorials/goweb/#sechandlers
-	mux.HandleFunc(apiSignIn, ctx.OAuthSignInHandler)
-	mux.HandleFunc(apiReply, ctx.OAuthReplyHandler)
+	//mux.HandleFunc(apiSignIn, ctx.OAuthSignInHandler)
+	//mux.HandleFunc(apiReply, ctx.OAuthReplyHandler)
 
 	mux.HandleFunc(accountPath, ctx.AccountHandler)
 

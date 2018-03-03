@@ -12,7 +12,6 @@ func ListenForReposWithLanguages(repos *chan gh_repo.Repo, store *gh_repo.MongoS
 			_, err := store.Insert(&repo)
 			if err != nil {
 				fmt.Printf("error inserting repo: %v\n", err)
-				return
 			}
 		default: // nothing
 		}

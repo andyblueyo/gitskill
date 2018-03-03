@@ -23,6 +23,7 @@ type MongoStore struct {
 type UpdatedUser struct {
 	GithubUsername    string         `json:"githubUsername" bson:"githubUsername"`
 	UserType          GithubUserType `json:"userType" bson:"userType"`
+	Orgs              []string       `json:"orgs" bson:"orgs"`
 	WebsiteUrl        string         `json:"websiteUrl" bson:"websiteUrl"`
 	Email             string         `json:"email" bson:"email"`
 	PublicRepos       int            `json:"publicRepos" bson:"publicRepos"`
@@ -50,11 +51,30 @@ func (s *MongoStore) GetByID(id bson.ObjectId) (*User, error) {
 }
 
 func (s *MongoStore) GetByGithubName(name string) (*User, error) {
-	u, err := s.getByField("name", name)
+	u, err := s.getByFieldCaseInsensitive("githubUsername", name)
 	if err != nil {
 		return nil, fmt.Errorf("error finding user: %v", err)
 	}
 	return u, nil
+}
+
+func (s *MongoStore) GetOrgByGithubNameCount(name string) (int) {
+	count, err := s.col.Find(
+		bson.M{
+			"githubUsername": bson.M{"$regex": bson.RegEx{Pattern: name, Options: "i"}},
+		}).Count()
+	if err != nil {
+		return 0
+	}
+	return count
+}
+
+func (s *MongoStore) GetAllOrgs() ([]*User, error) {
+	us, err := s.getManyByField("userType", GHTypeOrganization)
+	if err != nil {
+		return nil, fmt.Errorf("error finding users: %v", err)
+	}
+	return us, nil
 }
 
 func (s *MongoStore) Insert(user *User) (*User, error) {
@@ -71,6 +91,7 @@ func (s *MongoStore) Insert(user *User) (*User, error) {
 			Update: bson.M{
 				"$set": &UpdatedUser{
 					GithubUsername:    user.GithubUsername,
+					Orgs:              user.Orgs,
 					UserType:          user.UserType,
 					WebsiteUrl:        user.WebsiteUrl,
 					Email:             user.Email,
@@ -98,6 +119,17 @@ func (s *MongoStore) getByField(field string, value string) (*User, error) {
 		return nil, ErrUserNotFound
 	}
 	return u, nil
+}
+
+//GetByField returns the first user for which the given field
+//has the given found
+//Returns an error if no user matches the query
+func (s *MongoStore) getManyByField(field string, value string) ([]*User, error) {
+	us := make([]*User, 0, 100)
+	if err := s.col.Find(bson.M{field: value}).All(&us); err != nil {
+		return nil, ErrUserNotFound
+	}
+	return us, nil
 }
 
 func (s *MongoStore) getByFieldCaseInsensitive(field string, value string) (*User, error) {

@@ -14,17 +14,20 @@ const githubApiBase = "https://api.github.com"
 const orgsResource = "orgs"
 const currentUserResource = "user"
 const usersResource = "users"
+const membersResource = "members"
 const reposResource = "repos"
 const languagesResource = "languages"
 const defaultLimit = 100
 const defaultLanguageLimit = 50 // if a proj has over 50 languages lul
 const ownerQuery = "&affiliation=owner"
 
+type getToken func() string
+
 var limit = fmt.Sprintf("&per_page=%v", defaultLimit)
 
-func GetGithubUser(accountName, token string) (*gh_user.User, error) {
+func GetGithubUser(accountName string, getTokenFn getToken) (*gh_user.User, error) {
 	gu := &gh_user.GithubUser{}
-
+	token := getTokenFn()
 	url := getUserAccountUrl(accountName, token)
 
 	//switch accountType {
@@ -47,11 +50,12 @@ func GetGithubUser(accountName, token string) (*gh_user.User, error) {
 	return u, nil
 }
 
-func GetGithubRepos(accountName, accountType, token string, max int) ([]*gh_repo.GithubRepo, error) {
+func GetGithubRepos(accountName, accountType string, getTokenFn getToken, max int) ([]*gh_repo.GithubRepo, error) {
 	url := ""
 	ghJsonTotal := make([]*gh_repo.GithubRepo, 0, max)
 	currentPage := 0
 	for {
+		token := getTokenFn()
 		if currentPage*defaultLimit > max {
 			break
 		}
@@ -89,11 +93,51 @@ func GetGithubRepos(accountName, accountType, token string, max int) ([]*gh_repo
 	return ghJsonTotal, nil
 }
 
-func GetRepoLanguage(repo *gh_repo.Repo, token string) (*gh_repo.Repo, error) {
+func GetGithubMembers(accountName string, getTokenFn getToken) ([]string, error) {
+	url := ""
+	ghJsonTotal := make([]*gh_user.GithubUser, 0, 0)
+	currentPage := 0
+	for {
+		token := getTokenFn()
+		currentPage += 1
+		url = getOrgMembersUrl(accountName, token, currentPage)
+
+		ghJson := make([]*gh_user.GithubUser, 0, 100)
+		if err := fetchAndDecodeJSON(url, &ghJson); err != nil {
+			return nil, fmt.Errorf("ran into an error getting data: %v", err)
+		}
+
+		ghJsonTotal = append(ghJsonTotal, ghJson...)
+		if len(ghJson) < 100 {
+			break
+		}
+	}
+	memberStringSlice := make([]string, 0, len(ghJsonTotal))
+	for i := range ghJsonTotal {
+		memberStringSlice = append(memberStringSlice, ghJsonTotal[i].Login)
+	}
+	// Get repo languages
+	return memberStringSlice, nil
+}
+
+func GetUserOrganizations(user string, getTokenFn getToken) ([]*gh_user.Organization, error) {
+	// TODO
+	token := getTokenFn()
+	orgs := make([]*gh_user.Organization, 0, 100)
+	url := getUserOrgsUrl(user, token)
+	if err := fetchAndDecodeJSON(url, &orgs); err != nil {
+		return nil, fmt.Errorf("ran into an error getting user orgs: %v", err)
+	}
+	return orgs, nil
+}
+
+func GetRepoLanguage(repo *gh_repo.Repo, getTokenFn getToken) (*gh_repo.Repo, error) {
 
 	// is 50 languages sufficient? meh
 	languages := make([]*gh_repo.Language, 0, defaultLanguageLimit)
 	languagesRaw := map[string]int{}
+	token := getTokenFn()
+
 	languagesUrl := getLanguageUrlForRepo(repo.FullName, token)
 
 	if err := fetchAndDecodeJSON(languagesUrl, &languagesRaw); err != nil {
@@ -149,12 +193,21 @@ func getOrgReposUrl(org, token string, offset int) string {
 	return githubApiBase + "/" + orgsResource + "/" + org + "/" + reposResource + "?access_token=" + token + limit + offsetQuery
 }
 
+func getOrgMembersUrl(org, token string, offset int) string {
+	offsetQuery := offsetQuery(offset)
+	return githubApiBase + "/" + orgsResource + "/" + org + "/" + membersResource + "?access_token=" + token + limit + offsetQuery
+}
+
 func getUserAccountUrl(user, token string) string {
 	return githubApiBase + "/" + usersResource + "/" + user + "?access_token=" + token
 }
 
 func getOrgAccountUrl(org, token string) string {
 	return githubApiBase + "/" + orgsResource + "/" + org + "?access_token=" + token
+}
+
+func getUserOrgsUrl(user, token string) string {
+	return githubApiBase + "/" + usersResource + "/" + user + "/" + orgsResource + "?access_token=" + token
 }
 
 func getLanguageUrlForRepo(fullRepoName, token string) string {

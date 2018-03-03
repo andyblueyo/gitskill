@@ -20,6 +20,7 @@ type User struct {
 	OwnedPrivateRepos int            `json:"ownedPrivateRepos" bson:"ownedPrivateRepos"`
 	TotalPrivateRepos int            `json:"totalPrivateRepos" bson:"totalPrivateRepos"`
 	AvatarUrl         string         `json:"avatarUrl" bson:"avatarUrl"`
+	Orgs              []string       `json:"orgs,omitempty" bson:"orgs,omitempty"`
 }
 
 // For users that logged into the app
@@ -31,6 +32,10 @@ type GithubUser struct {
 	TotalPrivateRepos int            `json:"total_private_repos"`
 	OwnedPrivateRepos int            `json:"owned_private_repos"`
 	AvatarUrl         string         `json:"avatar_url"`
+}
+
+type Organization struct {
+	Login string `json:"login"`
 }
 
 func (gu *GithubUser) ToUser() *User {
