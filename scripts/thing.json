@@ -1,0 +1,27 @@
+{
+    "_id": ObjectId(
+    "5a95f1f583b9440001b7ac3f"
+    ),
+    "repoOwnerId": ObjectId(
+    "5a95f1f083b9440001b7ac2c"
+    ),
+    "fullName": "square/errbit",
+    "ownerName": "square",
+    "ownerType": "Organization",
+    "name": "errbit",
+    "url": "https://github.com/square/errbit",
+    "languages": [
+        {
+            "name": "Ruby",
+            "lines": 70589
+        },
+        {
+            "name": "JavaScript",
+            "lines": 8119
+        }
+    ],
+    "stars": 1,
+    "description": "The open source error catcher that's Hoptoad API compliant",
+    "forks": 0,
+    "updatedAt": "2017-06-05T20:02:43Z"
+}

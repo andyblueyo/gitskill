@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Env
+.idea/
+node_modules/
+ds/data
+scripts/data
