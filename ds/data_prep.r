@@ -12,25 +12,30 @@ repo_data_flat <- flatten(repo_data, recursive = TRUE) %>% sample_n(20, replace 
 # View(repo_data)
 
 print(repo_data[2,6])
-df_repo <- data.frame(repo_data_flat[, c("name", "languages", "ownerType", "ownerName")]) 
+df_repo <- data.frame(repo_data_flat[, c( "ownerName", "languages", "ownerType")]) 
 
-z <- 1
+
+index <- 1
+
+#Loop through language lists
 for(language in df_repo$languages){
+  
     if(length(language)>0){
-        
+      
+        #If there are any languages in the list, get the name and the lines
         lines <- language[,"lines"]
         lang <- language[,"name"]
         if(length(lang)>0){
             
             for(i in 1:length(lang)){
-                print(z)
-                
-                df_repo[z, lang[i]] <- lines[i]
+                print(index)
+                #Add cell in column of the language and index of the person we want
+                df_repo[index, lang[i]] <- lines[i]
             }
         }
     }
     
-    z <- z + 1
+  index <- index + 1
 }
 
 drops <- c("languages")
@@ -38,8 +43,7 @@ df_repo2 <- df_repo[, !(names(df_repo) %in% drops)] #%>% apply(2,as.character)
 df_repo2[is.na(df_repo2)] <- 0
 
 df_repo3 <- df_repo2 %>% 
-    group_by(ownerName) %>% 
-    filter() %>% 
+    group_by(ownerName, ownerType) %>% 
     summarize_all(funs(sum(as.numeric(.))))
 
 View(df_repo)
