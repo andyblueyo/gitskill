@@ -42,7 +42,7 @@ df_repo2 <- df_repo[, !(names(df_repo) %in% drops)] #%>% apply(2,as.character)
 df_repo2[is.na(df_repo2)] <- 0
 
 # Group by user 
-df_repo3 <- df_repo2 %>% 
+df_repo2 <- df_repo2 %>% 
     group_by(ownerName, ownerType) %>% 
     summarize_all(funs(sum(as.numeric(.))))
 
@@ -50,11 +50,11 @@ df_repo3 <- df_repo2 %>%
 colnames(user_data_flat)[1] <- "ownerName"
 
 #Select JUST Users (not orgs) from both dataframes
-df_repo3 <- df_repo3 %>% filter(ownerType == "User")
+df_repo2 <- df_repo2 %>% filter(ownerType == "User")
 user_data_df <- data.frame(user_data_flat[, c( "ownerName", "userType","publicRepos", "ownedPrivateRepos", "totalPrivateRepos")]) %>% filter(user_data_flat$userType == "User")
   
 #Merge 
-df4 <- merge(df_repo3, user_data_flat, by = "ownerName", all = TRUE) 
+merged_dfs <- merge(df_repo3, user_data_flat, by = "ownerName", all = TRUE) 
 
 colnames(df4)
 View(df_repo)
