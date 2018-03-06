@@ -5,8 +5,8 @@ library(tidyr)
 repo_data <- fromJSON("./data/repos.json")
 user_data <- fromJSON("./data/users.json")
 
-user_data_flat <- flatten(user_data, recursive = TRUE) %>% sample_n(20, replace = FALSE)
-repo_data_flat <- flatten(repo_data, recursive = TRUE) %>% sample_n(20, replace = FALSE)
+user_data_flat <- flatten(user_data, recursive = TRUE) #%>% sample_n(20, replace = FALSE)
+repo_data_flat <- flatten(repo_data, recursive = TRUE) #%>% sample_n(20, replace = FALSE)
 
 # View(user_data)
 # View(repo_data)
@@ -38,12 +38,20 @@ for(language in df_repo$languages){
   index <- index + 1
 }
 
+# remove languages and set NAs to 0
 drops <- c("languages")
 df_repo2 <- df_repo[, !(names(df_repo) %in% drops)] #%>% apply(2,as.character)
 df_repo2[is.na(df_repo2)] <- 0
 
+# Group by user 
 df_repo3 <- df_repo2 %>% 
     group_by(ownerName, ownerType) %>% 
     summarize_all(funs(sum(as.numeric(.))))
+colnames(user_data_flat)[1] <- "ownerName"
 
+df_repo3 <- df_repo3 %>% filter(ownerType == "User")
+user_data_df <- data.frame(user_data_flat[, c( "ownerName", "userType","publicRepos", "ownedPrivateRepos", "totalPrivateRepos")]) %>% filter(user_data_flat$userType == "User")
+  
+df4 <- merge(df_repo3, user_data_flat, by = "ownerName", all = TRUE) 
+colnames(df4)
 View(df_repo)
