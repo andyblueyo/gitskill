@@ -51,10 +51,12 @@ colnames(user_data_flat)[1] <- "ownerName"
 
 #Select JUST Users (not orgs) from both dataframes
 df_repo2 <- df_repo2 %>% filter(ownerType == "User")
-user_data_df <- data.frame(user_data_flat[, c( "ownerName", "userType","publicRepos", "ownedPrivateRepos", "totalPrivateRepos")]) %>% filter(user_data_flat$userType == "User")
+user_data_df <- data.frame(user_data_flat[, c( "ownerName", "userType","publicRepos", "orgs")]) %>% 
+  filter(userType == "User") 
   
 #Merge 
-merged_dfs <- merge(df_repo3, user_data_flat, by = "ownerName", all = TRUE) 
+merged_dfs <- merge(user_data_df, df_repo2, by = "ownerName", all = TRUE) %>% apply(2,as.character)
 
+write.csv(x = merged_dfs, file = "./data/merged_data.csv")
 colnames(df4)
 View(df_repo)
