@@ -6,6 +6,7 @@ import (
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 	"errors"
+	"sync"
 )
 
 var ErrRepoNotFound = errors.New("error: repo not found")
@@ -20,6 +21,8 @@ type MongoStore struct {
 	colname string
 	//Collection object
 	col *mgo.Collection
+
+	mtx *sync.RWMutex
 }
 
 type UpdatedRepo struct {
@@ -43,17 +46,21 @@ func NewMongoStore(sess *mgo.Session, dbName string, colName string) *MongoStore
 		dbname:  dbName,
 		colname: colName,
 		col:     sess.DB(dbName).C(colName),
+		mtx:     &sync.RWMutex{},
 	}
 }
 
 func (s *MongoStore) Insert(repo *Repo) (*Repo, error) {
+	s.mtx.Lock()
 	existing, err := s.getByFieldCaseInsensitive("fullName", repo.FullName)
 	if err != nil {
 		id := bson.NewObjectId()
 		repo.ID = id
 		if err := s.col.Insert(repo); err != nil {
+			s.mtx.Unlock()
 			return nil, fmt.Errorf("error inserting repo: %v", err)
 		}
+		s.mtx.Unlock()
 		return repo, nil
 	} else {
 		change := mgo.Change{
@@ -75,8 +82,10 @@ func (s *MongoStore) Insert(repo *Repo) (*Repo, error) {
 		}
 		updatedRepo := &Repo{}
 		if _, err := s.col.FindId(existing.ID).Apply(change, updatedRepo); err != nil {
+			s.mtx.Unlock()
 			return nil, fmt.Errorf("error updating repo: %v", err)
 		}
+		s.mtx.Unlock()
 		return repo, nil
 	}
 }

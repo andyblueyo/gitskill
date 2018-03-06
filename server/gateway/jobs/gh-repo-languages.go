@@ -9,13 +9,15 @@ func ListenForReposWithLanguages(repos *chan gh_repo.Repo, store *gh_repo.MongoS
 	for {
 		select {
 		case repo := <-*repos:
-			_, err := store.Insert(&repo)
-			if err != nil {
-				fmt.Printf("error inserting repo: %v\n", err)
-			}
+			go WriteRepoToDB(repo, store)
 		default: // nothing
 		}
 	}
 }
 
-
+func WriteRepoToDB(repo gh_repo.Repo, store *gh_repo.MongoStore) {
+	_, err := store.Insert(&repo)
+	if err != nil {
+		fmt.Printf("error inserting repo: %v\n", err)
+	}
+}
