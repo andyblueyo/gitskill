@@ -11,12 +11,10 @@ repo_data_flat <- flatten(repo_data, recursive = TRUE) #%>% sample_n(20, replace
 # View(user_data)
 # View(repo_data)
 
-print(repo_data[2,6])
 df_repo <- data.frame(repo_data_flat[, c( "ownerName", "languages", "ownerType")]) 
 
 
 index <- 1
-
 #Loop through language lists
 for(language in df_repo$languages){
   
@@ -47,11 +45,16 @@ df_repo2[is.na(df_repo2)] <- 0
 df_repo3 <- df_repo2 %>% 
     group_by(ownerName, ownerType) %>% 
     summarize_all(funs(sum(as.numeric(.))))
+
+#make column names match for merge
 colnames(user_data_flat)[1] <- "ownerName"
 
+#Select JUST Users (not orgs) from both dataframes
 df_repo3 <- df_repo3 %>% filter(ownerType == "User")
 user_data_df <- data.frame(user_data_flat[, c( "ownerName", "userType","publicRepos", "ownedPrivateRepos", "totalPrivateRepos")]) %>% filter(user_data_flat$userType == "User")
   
+#Merge 
 df4 <- merge(df_repo3, user_data_flat, by = "ownerName", all = TRUE) 
+
 colnames(df4)
 View(df_repo)
