@@ -15,6 +15,12 @@ $primary-color: #0066ff;
 }
 
 @font-face {
+    font-family: "Neue Haas Grotesk";
+    src: url("./fonts/NHaasGroteskTXPro-65Md.otf");
+    font-weight: 600;
+}
+
+@font-face {
     font-family: "Tiempos Text";
     src: url("./fonts/TiemposText-Regular.otf");
     font-weight: normal;
@@ -47,6 +53,7 @@ body {
     padding-right: 24px;
 }
 
+.mx-auto,
 h1,
 h2,
 h3,
@@ -54,7 +61,6 @@ h4,
 h5,
 h6,
 p {
-    max-width: 30rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -134,15 +140,6 @@ hr {
     border-bottom-color: #ccc;
 }
 
-.measure {
-    max-width: 30rem;
-}
-
-.mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .black {
     color: black;
 }
@@ -162,6 +159,29 @@ a:hover {
     max-width: calc((1024px - 30 * 16px - 24px * 2) / 2);
     padding-left: 24px;
     padding-right: 24px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.sans-serif {
+    font-family: "Neue Haas Grotesk";
+}
+
+.subhead {
+    font-size: 14px;
+}
+
+.measure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    max-width: 32rem;
 }
 
 @media screen and (max-width: 64em) {
