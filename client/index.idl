@@ -1,7 +1,7 @@
 [meta title:"Client" description:"Short description of your project" /]
 
 [Heading is:"h1"]
-    I saw Purple. That's all I saw. No numbers, no faces, just Purple.
+    I saw Purple. That's all I saw. No numbers, no faces, just Purple
 [/Heading]
 
 [Subhead authors:`[{ name: "Andrea Chen", url: "https://github.com/abchen" }, { name: "Danish Bashar", url: "https://github.com/NegativeRainbow" }, { name: "Evan Frawley", url: "https://github.com/evanfrawley" }, {  name: "Paul Vaden", url: "https://github.com/paulvaden" }, { name: "Vincent van der Meulen", url: "https://github.com/vincentmvdm"}]` /]   
