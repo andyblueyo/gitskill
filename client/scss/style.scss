@@ -38,31 +38,22 @@ $primary-color: #0066ff;
     font-weight: bold;
 }
 
+html,
+body {
+    font-size: 20px;
+}
+
 body {
     font-family: "Tiempos Text";
-    font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.6;
     color: #3c3c3c;
 }
 
 .idyll-root {
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 24px;
     padding-right: 24px;
-}
-
-.mx-auto,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
 
 h1,
@@ -75,21 +66,21 @@ h6 {
     line-height: 1.25;
     font-family: "Neue Haas Grotesk";
     font-weight: bold;
-    margin-top: 1em;
+    margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: bolder;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
 }
 
 h4 {
@@ -97,11 +88,11 @@ h4 {
 }
 
 h5 {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
 }
 
 h6 {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
 }
 
 p,
@@ -126,7 +117,7 @@ pre {
 }
 
 blockquote {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-style: italic;
     margin-left: 0;
 }
@@ -170,7 +161,7 @@ a:hover {
 }
 
 .subhead {
-    font-size: 14px;
+    font-size: 0.8rem;
 }
 
 .measure,
@@ -181,7 +172,7 @@ h4,
 h5,
 h6,
 p {
-    max-width: 32rem;
+    max-width: 30rem;
 }
 
 @media screen and (max-width: 64em) {
@@ -192,4 +183,16 @@ p {
         padding-left: 0;
         padding-right: 0;
     }
+}
+
+.mt0 {
+    margin-top: 0;
+}
+
+h1:first-of-type {
+    margin-top: 0;
+}
+
+p:last-of-type {
+    margin-bottom: 0;
 }
