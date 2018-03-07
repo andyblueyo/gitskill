@@ -1,41 +1,19 @@
 [meta title:"Client" description:"Short description of your project" /]
 
-[Header
-  title:"Client"
-  subtitle:"Welcome to Idyll. Open index.idl to start writing"
-  author:"Your Name Here"
-  authorLink:"https://idyll-lang.github.io" /]
+[Heading is:"h1"]
+    I saw Purple. That's all I saw. No numbers, no faces, just Purple.
+[/Heading]
 
-This is an Idyll file. Write text
-as you please in here. To add interactivity,
-you can add  different components to the text.
+[Subhead authors:`[{ name: "Andrea Chen", url: "https://github.com/abchen" }, { name: "Danish Bashar", url: "https://github.com/NegativeRainbow" }, { name: "Evan Frawley", url: "https://github.com/evanfrawley" }, {  name: "Paul Vaden", url: "https://github.com/paulvaden" }, { name: "Vincent van der Meulen", url: "https://github.com/vincentmvdm"}]` /]   
 
-Here is how you can use a variable:
+[Text]
+    Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+[/Text]
 
-[var name:"exampleVar" value:5 /]
+[Text]
+    Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+[/Text]
 
-[Range min:0 max:10 value:exampleVar /]
-[Display value:exampleVar /]
-
-```js
-var code = true;
-```
-
-And here is a custom component:
-
-[Aside]
-    [caption]Complaints sent to the CFPB each month[/caption]
-[/Aside]
-
-You can use standard html tags if a
-component with the same name
-doesn't exist.
-
-* *markdown* syntax is supported.
-
-[var name:"state" value:0 /]
-
-[CustomD3Component state:state /]
-[button onClick:`state++`]
-  Click Me.
-[/button]
+[Text]
+    Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.
+[/Text]
