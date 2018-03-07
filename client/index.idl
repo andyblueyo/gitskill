@@ -23,7 +23,9 @@ var code = true;
 
 And here is a custom component:
 
-[CustomComponent /]
+[Aside]
+    [caption]Complaints sent to the CFPB each month[/caption]
+[/Aside]
 
 You can use standard html tags if a
 component with the same name
