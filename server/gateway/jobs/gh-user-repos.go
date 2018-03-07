@@ -11,13 +11,17 @@ func ListenForRepos(repoChannel *chan gh_repo.Repo, reposWithLanguages *chan gh_
 	for {
 		select {
 		case repo := <-*repoChannel:
-			rwl, err := services.GetRepoLanguage(&repo, ctx.GetNextToken)
-			if err != nil {
-				fmt.Printf("error getting github repo langugaes: %v for repo: %s\n", err, repo)
-			} else {
-				*reposWithLanguages <- *rwl
-			}
+			go ProcessRepoLangugaes(repo, reposWithLanguages, ctx)
 		default: // nothing
 		}
+	}
+}
+
+func ProcessRepoLangugaes(repo gh_repo.Repo, reposWithLanguages *chan gh_repo.Repo, ctx *handlers.HandlerContext) {
+	rwl, err := services.GetRepoLanguage(&repo, ctx.GetNextToken)
+	if err != nil {
+		fmt.Printf("error getting github repo langugaes: %v for repo: %s\n", err, repo)
+	} else {
+		*reposWithLanguages <- *rwl
 	}
 }

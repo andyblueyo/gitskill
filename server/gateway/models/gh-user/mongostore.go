@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"gopkg.in/mgo.v2/bson"
 	"errors"
+	"sync"
 )
 
 var ErrUserNotFound = errors.New("error: user not found")
@@ -18,6 +19,8 @@ type MongoStore struct {
 	colname string
 	//Collection object
 	col *mgo.Collection
+
+	mtx *sync.RWMutex
 }
 
 type UpdatedUser struct {
@@ -39,6 +42,7 @@ func NewMongoStore(sess *mgo.Session, dbName string, colName string) *MongoStore
 		dbname:  dbName,
 		colname: colName,
 		col:     sess.DB(dbName).C(colName),
+		mtx:     &sync.RWMutex{},
 	}
 }
 
@@ -78,13 +82,16 @@ func (s *MongoStore) GetAllOrgs() ([]*User, error) {
 }
 
 func (s *MongoStore) Insert(user *User) (*User, error) {
+	s.mtx.Lock()
 	id := bson.NewObjectId()
 	existing, err := s.getByFieldCaseInsensitive("githubUsername", user.GithubUsername)
 	if err != nil {
 		user.ID = id
 		if err := s.col.Insert(user); err != nil {
+			s.mtx.Unlock()
 			return nil, fmt.Errorf("error inserting user: %v", err)
 		}
+		s.mtx.Unlock()
 		return user, nil
 	} else {
 		change := mgo.Change{
@@ -104,8 +111,10 @@ func (s *MongoStore) Insert(user *User) (*User, error) {
 		}
 		updatedUser := &User{}
 		if _, err := s.col.FindId(existing.ID).Apply(change, updatedUser); err != nil {
+			s.mtx.Unlock()
 			return nil, fmt.Errorf("error updating user: %v", err)
 		}
+		s.mtx.Unlock()
 		return updatedUser, nil
 	}
 }

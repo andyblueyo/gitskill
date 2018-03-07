@@ -81,17 +81,6 @@ func main() {
 	go jobs.ListenForReposWithLanguages(&reposWithLanguages, reposStore)
 	go jobs.ListenForOrgToScrapeMembers(&orgsToScrapeForMembers, &usersToScrape, ctx)
 
-	//orgsToScrapeForMembers <- "airbnb"
-	//usersToScrape <- "airbnb"
-	//orgsToScrapeForMembers <- "apple"
-	//
-	orgs, err := usersStore.GetAllOrgs()
-	for i := range orgs {
-		o := orgs[i]
-		orgsToScrapeForMembers <- o.GithubUsername
-	}
-
-	//orgsToScrapeForMembers <- "airbnb"
 	mux := http.NewServeMux()
 
 	//create a new handlers.CityHandler struct
@@ -103,8 +92,8 @@ func main() {
 	//is used for simple functions that conform tos the
 	//http.HandlerFunc type.
 	//see https://drstearns.github.io/tutorials/goweb/#sechandlers
-	//mux.HandleFunc(apiSignIn, ctx.OAuthSignInHandler)
-	//mux.HandleFunc(apiReply, ctx.OAuthReplyHandler)
+	mux.HandleFunc(apiSignIn, ctx.OAuthSignInHandler)
+	mux.HandleFunc(apiReply, ctx.OAuthReplyHandler)
 
 	mux.HandleFunc(accountPath, ctx.AccountHandler)
 
