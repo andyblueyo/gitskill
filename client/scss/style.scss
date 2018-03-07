@@ -155,3 +155,21 @@ a:hover {
     color: $primary-color;
     transition: color 0.2s ease;
 }
+
+.aside {
+    position: absolute;
+    right: 0;
+    max-width: calc((1024px - 30 * 16px - 24px * 2) / 2);
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+@media screen and (max-width: 64em) {
+    .aside {
+        position: static;
+        width: 100%;
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
