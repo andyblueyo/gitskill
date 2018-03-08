@@ -1,6 +1,7 @@
 [meta title:"The Key to Authoring a Popular GitHub Repository" description:"Predicting a GitHub repository's stars based on its features" /]
 
 [var name:"sidePanelView" value:"initial" /]
+[data name:"prePrepData" source:"prePrepData.json" /]
 
 [Page]
 
@@ -46,9 +47,13 @@
         Structuring the Information
     [/Heading]
 
-    [Text]
+    [Text onEnterViewFully:`sidePanelView = "prePrepData"`]
         Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
     [/Text]
+
+    [NotDesktop]
+        [TableComponent columns:`["userType", "publicRepos", "orgs", "ownerType", "stars", "forks", "Java"]` data:prePrepData /]
+    [/NotDesktop]
 
     [Heading is:"h2"]
         A Quick Glance at the Data
@@ -88,7 +93,7 @@
 
     [Desktop]
         [Fixed]
-            [SidePanel view:sidePanelView /]
+            [SidePanel view:sidePanelView prePrepData:prePrepData /]
         [/Fixed]
     [/Desktop]
 

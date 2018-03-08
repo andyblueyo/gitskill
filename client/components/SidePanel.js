@@ -4,6 +4,7 @@ import Flex from "./Flex";
 import Blockquote from "./Blockquote";
 import GitHubStar from "./GitHubStar";
 import Terminal from "./Terminal";
+import TableComponent from "./TableComponent";
 
 class SidePanel extends React.Component {
     render() {
@@ -25,6 +26,23 @@ class SidePanel extends React.Component {
 
             case "terminal":
                 content = <Terminal />;
+                break;
+
+            case "prePrepData":
+                content = (
+                    <TableComponent
+                        columns={[
+                            "userType",
+                            "publicRepos",
+                            "orgs",
+                            "ownerType",
+                            "stars",
+                            "forks",
+                            "Java"
+                        ]}
+                        data={this.props.prePrepData}
+                    />
+                );
                 break;
 
             default:

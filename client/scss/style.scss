@@ -21,6 +21,12 @@ $primary-color: #0066ff;
 }
 
 @font-face {
+    font-family: "Neue Haas Grotesk";
+    src: url("./fonts/NHaasGroteskTXPro-55Rg.otf");
+    font-weight: normal;
+}
+
+@font-face {
     font-family: "Tiempos Text";
     src: url("./fonts/TiemposText-Regular.otf");
     font-weight: normal;
@@ -218,6 +224,30 @@ p:last-of-type {
 #terminal {
     width: 100%;
     max-width: 480px;
+}
+
+table {
+    font-family: "Neue Haas Grotesk";
+    font-size: 0.7rem;
+    border: 1px solid #eee;
+}
+
+th {
+    font-weight: 600;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+tr {
+    border-bottom: 1px solid #ebedf0;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f5f7fa;
 }
 
 @media screen and (max-width: 640px) {

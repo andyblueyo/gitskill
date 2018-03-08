@@ -3117,6 +3117,12 @@ idyll-compiler@^2.1.1:
     nearley "^2.7.12"
     smartquotes "^2.0.0"
 
+idyll-component@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/idyll-component/-/idyll-component-1.2.2.tgz#0a314657839492a98f414e5763a564c275a62328"
+  dependencies:
+    scrollwatch "^1.2.0"
+
 idyll-components@^2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/idyll-components/-/idyll-components-2.1.6.tgz#bfc788252442149e5bce11b3a8d1aae80d4dcabf"
@@ -3867,7 +3873,7 @@ lodash@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.4, lodash@~4.17.4:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.4, lodash@^4.17.5, lodash@~4.17.4:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
@@ -4906,6 +4912,10 @@ react@^16.0.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+reactable@^0.14.1:
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/reactable/-/reactable-0.14.1.tgz#2ab9895e3df6da2498625de46d3691592d18c93b"
+
 read-only-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/read-only-stream/-/read-only-stream-2.0.0.tgz#2724fd6a8113d73764ac288d4386270c1dbf17f0"
@@ -5257,6 +5267,10 @@ scrollmonitor@^1.2.3:
 scrollparent@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/scrollparent/-/scrollparent-2.0.1.tgz#715d5b9cc57760fb22bdccc3befb5bfe06b1a317"
+
+scrollwatch@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/scrollwatch/-/scrollwatch-1.2.0.tgz#3e6e15db4af7583354f407dbad45a9a58a94fb66"
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"
