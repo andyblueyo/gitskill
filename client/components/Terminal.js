@@ -1,6 +1,8 @@
 import moment from "moment";
 import React from "react";
 
+import Caption from "./Caption";
+
 const TerminalHeader = props => (
     <div style={styles.terminalHeader}>
         <div style={styles.terminalHeaderInner}>
@@ -55,11 +57,17 @@ class Terminal extends React.Component {
         ));
 
         return (
-            <div id="terminal">
-                <TerminalHeader>
-                    <span>evan ― -bash ―</span>
-                </TerminalHeader>
-                <TerminalBody>{formattedOutput}</TerminalBody>
+            <div>
+                <div id="terminal">
+                    <TerminalHeader>
+                        <span>evan ― -bash ―</span>
+                    </TerminalHeader>
+                    <TerminalBody>{formattedOutput}</TerminalBody>
+                </div>
+                <Caption
+                    figureNumber={this.props.figureNumber}
+                    figureDescription={this.props.figureDescription}
+                />
             </div>
         );
     }

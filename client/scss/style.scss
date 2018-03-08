@@ -21,6 +21,12 @@ $primary-color: #0066ff;
 }
 
 @font-face {
+    font-family: "Neue Haas Grotesk";
+    src: url("./fonts/NHaasGroteskTXPro-55Rg.otf");
+    font-weight: normal;
+}
+
+@font-face {
     font-family: "Tiempos Text";
     src: url("./fonts/TiemposText-Regular.otf");
     font-weight: normal;
@@ -53,6 +59,12 @@ body {
     font-family: "Tiempos Text";
     line-height: 1.6;
     color: #3c3c3c;
+    background: radial-gradient(
+        at top left,
+        rgba(0, 102, 255, 0.025),
+        transparent,
+        rgba(0, 102, 255, 0.025)
+    );
 }
 
 .idyll-root {
@@ -109,6 +121,11 @@ pre,
 blockquote {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
+}
+
+.svg-wrapper {
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 code,
@@ -171,13 +188,15 @@ a:hover {
 }
 
 .measure,
+.caption,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p {
+p,
+.svg-wrapper {
     max-width: 30rem;
 }
 
@@ -218,6 +237,49 @@ p:last-of-type {
 #terminal {
     width: 100%;
     max-width: 480px;
+}
+
+svg {
+    width: 100%;
+}
+
+.isvg.loaded {
+    width: 100%;
+}
+
+table {
+    font-family: "Neue Haas Grotesk";
+    font-size: 0.7rem;
+    border: 1px solid #e6e8eb;
+}
+
+th {
+    font-weight: 600;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+tr {
+    border-bottom: 1px solid #e6e8eb;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f5f7fa;
+}
+
+.caption {
+    font-size: 0.8rem;
+    color: #4e5052;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.italic {
+    font-style: italic;
 }
 
 @media screen and (max-width: 640px) {

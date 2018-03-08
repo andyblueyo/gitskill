@@ -1,9 +1,9 @@
 [meta title:"The Key to Authoring a Popular GitHub Repository" description:"Predicting a GitHub repository's stars based on its features" /]
 
 [var name:"sidePanelView" value:"initial" /]
+[data name:"prePrepData" source:"prePrepData.json" /]
 
 [Page]
-
     [Heading is:"h1"] 
         The Key to Authoring a Popular GitHub Repository
     [/Heading]
@@ -39,26 +39,30 @@
     [/Text]
 
     [NotDesktop]
-        [Terminal /]
+        [Terminal figureNumber:1 figureDescription:"Cras mattis consectetur purus sit amet fermentum" /]
     [/NotDesktop]
 
     [Heading is:"h2"]
         Structuring the Information
     [/Heading]
 
-    [Text]
+    [Text onEnterViewFully:`sidePanelView = "prePrepData"`]
         Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
     [/Text]
+
+    [NotDesktop]
+        [TableComponent columns:`["userType", "publicRepos", "orgs", "ownerType", "stars", "forks", "Java"]` data:prePrepData figureNumber:2 figureDescription:"Ullamcorper nulla non metus auctor fringilla" /]
+    [/NotDesktop]
 
     [Heading is:"h2"]
         A Quick Glance at the Data
     [/Heading]
 
-    [Text]
+    [Text onEnterViewFully:`sidePanelView = "predAct"`]
         Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     [/Text]
 
-    [Text]
+    [Text onEnterViewFully:`sidePanelView = "predError"`]
         Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.
     [/Text]
 
@@ -74,6 +78,12 @@
         Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere consectetur est at lobortis.
     [/Text]
 
+    [NotDesktop]
+        [Chart src:"images/predAct.svg" figureNumber:3 figureDescription:"Integer posuere erat a ante venenatis dapibus posuere velit aliquet" /]
+
+        [Chart src:"images/predError.svg" figureNumber:4 figureDescription:"Morbi leo risus, porta ac consectetur ac, vestibulum at eros" /]
+    [/NotDesktop]
+
     [Heading is:"h2"]
         The Formula for Success
     [/Heading]
@@ -86,10 +96,14 @@
         Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.
     [/Text]
 
+    [Monospace]
+        git commit -m "fin"
+    [/Monospace]
+
     [Desktop]
         [Fixed]
-            [SidePanel view:sidePanelView /]
+            [SidePanel view:sidePanelView prePrepData:prePrepData /]
         [/Fixed]
     [/Desktop]
-
 [/Page]
+
