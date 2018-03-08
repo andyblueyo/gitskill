@@ -3,9 +3,9 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
       <title>
-        The Key to Authoring a Popular GitHub Repository
+        The Key to Having Meaningful Contributions to Github
       </title>
-      <meta property="og:title" content="The Key to Authoring a Popular GitHub Repository">
+      <meta property="og:title" content="The Key to Having Meaningful Contributions to Github">
     <meta charset="utf-8">
     <meta property="og:type" content="article">
 
@@ -15,7 +15,7 @@
   </head>
   <body>
     <div id="idyll-mount"><div class="idyll-root" data-reactroot=""><div class="page"><h1> 
-        The Key to Authoring a Popular GitHub Repository
+        The Key to Having Meaningful Contributions to Github
     </h1><div class="measure mx-auto"><span class="subhead">By <span><a class="black bold sans-serif" href="https://github.com/abchen" target="_blank">Andrea Chen</a></span><span>, <a class="black bold sans-serif" href="https://github.com/NegativeRainbow" target="_blank">Danish Bashar</a></span><span>, <a class="black bold sans-serif" href="https://github.com/evanfrawley" target="_blank">Evan Frawley</a></span><span>, <a class="black bold sans-serif" href="https://github.com/paulvaden" target="_blank">Paul Vaden</a></span><span> and <a class="black bold sans-serif" href="https://github.com/vincentmvdm" target="_blank">Vincent van der Meulen</a></span></span></div><p>
         GitHub is a great way to see work that has been shared in the community. Public repositories allow others to explore projects as well as view how the code is written. A popular metric of popularity for a project on GitHub are stars, where users can show support by marking repositories with a star. A star on a repository allow users to find this repository easier later, allows GitHub to recommend more similar repositories, and most importantly, increases the popularity of this repository for GitHub’s Explore page, where repositories are featured to the developer community. 
     </p><p>
@@ -29,7 +29,7 @@
         Our team member, Evan, wrote a script that would allow us to call data from the API using a Round Robin API token scraping method. 
     </p><p>
         Afterwards, we stored our data in a Mongo database, since it would allow us to easily access the data. 
-    </p><div class="hide-xl"><div><div id="terminal"><div style="background:linear-gradient(0deg, rgb(216, 216, 216), rgb(236, 236, 236));border-top:1px solid white;color:rgba(0, 0, 0, 0.7);font-family:Helvetica, sans-serif;font-size:13px;text-align:center;line-height:22px;height:22px;border-top-left-radius:5px;border-top-right-radius:5px"><div style="display:flex;justify-content:space-between"><div style="display:flex;align-items:center"><div style="height:12px;width:12px;border-radius:50%;margin-left:4px;margin-right:4px;border:1px solid rgba(0, 0, 0, 0.2);background-color:#8c8c91"></div><div style="height:12px;width:12px;border-radius:50%;margin-left:4px;margin-right:4px;border:1px solid rgba(0, 0, 0, 0.2);background-color:#8c8c91"></div><div style="height:12px;width:12px;border-radius:50%;margin-left:4px;margin-right:4px;border:1px solid rgba(0, 0, 0, 0.2);background-color:#8c8c91"></div></div><span>evan ― -bash ―</span><div style="width:52px"></div></div></div><div style="background-color:#323232;color:white;font-family:Menlo, monospace;font-size:13px;white-space:pre-wrap;border-bottom-left-radius:5px;border-bottom-right-radius:5px;padding-bottom:56.25%;position:relative;overflow:hidden"><div style="position:absolute;top:4px;right:4px;bottom:4px;left:4px"><div>[15:01:48] Fetching repository 6ny8u8</div></div></div></div><div class="caption"><span class="italic">Figure 1. </span><span>Cras mattis consectetur purus sit amet fermentum</span></div></div></div><h2>
+    </p><div class="hide-xl"><div><div id="terminal"><div style="background:linear-gradient(0deg, rgb(216, 216, 216), rgb(236, 236, 236));border-top:1px solid white;color:rgba(0, 0, 0, 0.7);font-family:Helvetica, sans-serif;font-size:13px;text-align:center;line-height:22px;height:22px;border-top-left-radius:5px;border-top-right-radius:5px"><div style="display:flex;justify-content:space-between"><div style="display:flex;align-items:center"><div style="height:12px;width:12px;border-radius:50%;margin-left:4px;margin-right:4px;border:1px solid rgba(0, 0, 0, 0.2);background-color:#8c8c91"></div><div style="height:12px;width:12px;border-radius:50%;margin-left:4px;margin-right:4px;border:1px solid rgba(0, 0, 0, 0.2);background-color:#8c8c91"></div><div style="height:12px;width:12px;border-radius:50%;margin-left:4px;margin-right:4px;border:1px solid rgba(0, 0, 0, 0.2);background-color:#8c8c91"></div></div><span>evan ― -bash ―</span><div style="width:52px"></div></div></div><div style="background-color:#323232;color:white;font-family:Menlo, monospace;font-size:13px;white-space:pre-wrap;border-bottom-left-radius:5px;border-bottom-right-radius:5px;padding-bottom:56.25%;position:relative;overflow:hidden"><div style="position:absolute;top:4px;right:4px;bottom:4px;left:4px"><div>[15:26:09] Fetching repository xc4x6e</div></div></div></div><div class="caption"><span class="italic">Figure 1. </span><span>Our team member, Evan, wrote a script that would allow us to call data from the API using a Round Robin API token scraping method</span></div></div></div><h2>
         Structuring the Information
     </h2><p>
        The data we had collected from GitHub’s API was stored in a Mongo Database for ease of storage and speed with being able to access the data. Because our team, largely did not know Mongo’s database well, Evan was able to also provide the JSON of the collected data. 
@@ -37,12 +37,12 @@
         Being able to access the data in a JSON format allowed our team to read in the JSON file, wrangle the data, and output a CSV we would use for our models. 
     </p><p>
         Using R’s jsonlite library allowed us to read the JSON file, flatten the data, and unlist columns that contained multiple lists of data. For this project, our languages column in our repo.json file was a list that contained dataframe of two columns: language and lines. We used Hadley Wickham’s tidyr library, as well as our own private functions to reshape the data to create models and visualizations. 
-    </p><div class="hide-xl"><div style="overflow-x:auto"><div><table><thead><tr><th>userType</th><th>publicRepos</th><th>orgs</th><th>ownerType</th><th>stars</th><th>forks</th><th>Java</th></tr></thead><tbody><tr><td>User</td><td>68</td><td>c(&#x27;Facebook&#x27;, &#x27;Bloomberg&#x27;)</td><td>User</td><td>62</td><td>20</td><td>28440350</td></tr><tr><td>Organization</td><td>31</td><td>NULL</td><td>Organization</td><td>451</td><td>118</td><td>0</td></tr><tr><td>User</td><td>117</td><td>Amazon</td><td>User</td><td>73</td><td>14</td><td>1816967</td></tr></tbody></table></div><div class="caption"><span class="italic">Figure 2. </span><span>Ullamcorper nulla non metus auctor fringilla</span></div></div></div><h2>
+    </p><div class="hide-xl"><div style="overflow-x:auto"><div><table><thead><tr><th>userType</th><th>publicRepos</th><th>orgs</th><th>ownerType</th><th>stars</th><th>forks</th><th>Java</th></tr></thead><tbody><tr><td>User</td><td>68</td><td>c(&#x27;Facebook&#x27;, &#x27;Bloomberg&#x27;)</td><td>User</td><td>62</td><td>20</td><td>28440350</td></tr><tr><td>Organization</td><td>31</td><td>NULL</td><td>Organization</td><td>451</td><td>118</td><td>0</td></tr><tr><td>User</td><td>117</td><td>Amazon</td><td>User</td><td>73</td><td>14</td><td>1816967</td></tr></tbody></table></div><div class="caption"><span class="italic">Figure 2. </span><span>Our structured data</span></div></div></div><h2>
         A Quick Glance at the Data
     </h2><p>
         Our dataset was relatively small compared to the number of public repos available on GitHub. However for this project, the size of our data was sufficient to suit our needs. Below are some quick numbers that shape our dataset. 
-    </p><ul><li>Around 316 coding languages represented, even unusual ones like Dogescript</li><li>Around 157,807 repositories present in our data</li></ul><div class="hide-xl"><div><img src="images/langFrequency.png" alt="Test"/><div class="caption"><span class="italic">Figure 42. </span><span>Test</span></div></div></div><h2>
-        The Search for the Right Model
+    </p><ul><li>Around 316 coding languages represented, even unusual ones like Dogescript</li><li>Around 157,807 repositories present in our data</li></ul><div class="hide-xl"><div><img src="images/langFrequency.png" alt="The top 10 most used languages"/><div class="caption"><span class="italic">Figure 3. </span><span>The top 10 most used languages</span></div></div></div><h2>
+        The Right Approach
     </h2><p>
         The results from data science are derived from our processes. One of the biggest challenges we ran into was wrangling the data into a format that we would be able to run our machine learning models on. This resulted in unlisting our nested columns such as language, merging repo and user data together, and reshaping our data. 
     </p><p>
@@ -50,10 +50,10 @@
     </p><p>
         One of the biggest challenge was doing the machine learning itself. Our team member, Paul, explored a wide variety of models such as K Nearest Neighbors and Linear Regression. Eventually, after tuning our parameters, we found the Random Forest Model to be one of our best performing models as seen from it’s scoring using the Negative Log Loss metric. Despite it performing well, at predicting how many stars a user or organizations repo would have, the actual numbers were still far estimates. Despite this our model still was a success, since it was able to predict at least within the ballpark of the actual star count. 
     </p><h2>
-        Predicting the Future
+        Making Predictions
     </h2><p>
         Although our models are still rough and need to be further refined, our outcomes, star count, from our best performing model, the Random Forest, was performing well enough to predict a star count that was within the ballpark of the actual star by at least a difference within a power of 10 for many of its cases. We also used GridSearchCV to find and determine the best parameters for our model. 
-    </p><div class="hide-xl"><div><img src="images/predAct.png" alt="Test"/><div class="caption"><span class="italic">Figure 42. </span><span>Test</span></div></div><div><img src="images/predError.png" alt="Test"/><div class="caption"><span class="italic">Figure 42. </span><span>Test</span></div></div></div><p>
+    </p><div class="hide-xl"><div><img src="images/predAct.png" alt="Predicted stars versus actual stars"/><div class="caption"><span class="italic">Figure 4. </span><span>Predicted stars versus actual stars</span></div></div><div><img src="images/predError.png" alt="Prediction error versus actual stars"/><div class="caption"><span class="italic">Figure 5. </span><span>Prediction error versus actual stars</span></div></div></div><p>
         Overall, it seems to be doable to predict the number of star a repo earns based on languages, lines of code, and number of past repos. We still have quite a ways to continue with refining our models, but we are excited to continue looking into other ways to optimize our data.
     </p><p style="font-family:monospace;color:#4e5052">
         git commit -m &quot;fin&quot;
