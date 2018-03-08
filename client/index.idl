@@ -21,7 +21,7 @@
     [Text]
         In this project, our team focused on exploring the possibilities of predicting number of stars. The defining questions and hypothesis are listed below.
     [/Text]
-    
+
     [List items:`["Based on data from GitHub, are we able to predict the number of stars a repo from an organization or user can have?", "Is there a relationship between features on GitHub and number of stars?"]` /]
 
     [NotDesktop]
@@ -72,11 +72,15 @@
         A Quick Glance at the Data
     [/Heading]
 
-    [Text onEnterViewFully:`sidePanelView = "predAct"`]
+    [Text onEnterViewFully:`sidePanelView = "langFrequency"`]
         Our dataset was relatively small compared to the number of public repos available on GitHub. However for this project, the size of our data was sufficient to suit our needs. Below are some quick numbers that shape our dataset. 
     [/Text]
 
     [List items:`["Around 316 coding languages represented, even unusual ones like Dogescript", "Around 157,807 repositories present in our data"]` /]
+
+    [NotDesktop]
+        [Image src:"images/langFrequency.png" figureNumber:42 figureDescription:"Test" /]
+    [/NotDesktop]
 
     [Heading is:"h2"]
         The Search for the Right Model

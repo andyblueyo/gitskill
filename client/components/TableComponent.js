@@ -9,11 +9,21 @@ class TableComponent extends React.Component {
     }
     render() {
         let thead = (
-            <tr>{this.props.columns.map((column, i) => <th key={`column_${i}`}>{column}</th>)}</tr>
+            <tr>
+                {this.props.columns.map((column, i) => (
+                    <th key={`column_${i}`}>{column}</th>
+                ))}
+            </tr>
         );
 
         let tbody = this.props.data.map((row, i) => {
-            return (<tr key={`row_${i}`}>{_.map(row, (value, j) => <td key={`tableKey_${i}_${j}`}>{value}</td>)}</tr>)
+            return (
+                <tr key={`row_${i}`}>
+                    {_.map(row, (value, j) => (
+                        <td key={`tableKey_${i}_${j}`}>{value}</td>
+                    ))}
+                </tr>
+            );
         });
 
         return (

@@ -6,6 +6,7 @@ import GitHubStar from "./GitHubStar";
 import Terminal from "./Terminal";
 import TableComponent from "./TableComponent";
 import Chart from "./Chart";
+import Image from "./Image";
 
 class SidePanel extends React.Component {
     render() {
@@ -60,6 +61,16 @@ class SidePanel extends React.Component {
                         src="images/predAct.svg"
                         figureNumber={3}
                         figureDescription="Integer posuere erat a ante venenatis dapibus posuere velit aliquet"
+                    />
+                );
+                break;
+
+            case "langFrequency":
+                content = (
+                    <Image
+                        src="images/langFrequency.png"
+                        figureNumber={42}
+                        figureDescription="Test"
                     />
                 );
                 break;

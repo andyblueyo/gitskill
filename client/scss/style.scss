@@ -133,9 +133,10 @@ ul {
     margin-bottom: 1.5em;
 }
 
-.svg-wrapper {
+.svg-wrapper,
+img {
     margin-top: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 code,
@@ -207,8 +208,14 @@ h5,
 h6,
 p,
 ul,
+img,
 .svg-wrapper {
     max-width: 30rem;
+}
+
+img {
+    display: block;
+    width: 100%;
 }
 
 ul {
