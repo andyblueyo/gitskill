@@ -45,7 +45,7 @@
     [/Text]
 
     [NotDesktop]
-        [Terminal figureNumber:1 figureDescription:"Cras mattis consectetur purus sit amet fermentum" /]
+        [Terminal figureNumber:1 figureDescription:"Our team member, Evan, wrote a script that would allow us to call data from the API using a Round Robin API token scraping method" /]
     [/NotDesktop]
 
     [Heading is:"h2"]
@@ -83,7 +83,7 @@
     [/NotDesktop]
 
     [Heading is:"h2"]
-        The Search for the Right Model
+        The Right Approach
     [/Heading]
 
     [Text]
@@ -99,7 +99,7 @@
     [/Text]
 
     [Heading is:"h2" onEnterViewFully:`sidePanelView = "predAct"`]
-        Predicting the Future
+        Making Predictions
     [/Heading]
 
     [Text]
