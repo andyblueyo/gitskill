@@ -25,7 +25,12 @@ class SidePanel extends React.Component {
                 break;
 
             case "terminal":
-                content = <Terminal />;
+                content = (
+                    <Terminal
+                        figureNumber={1}
+                        figureDescription="Cras mattis consectetur purus sit amet fermentum"
+                    />
+                );
                 break;
 
             case "prePrepData":
@@ -41,6 +46,8 @@ class SidePanel extends React.Component {
                             "Java"
                         ]}
                         data={this.props.prePrepData}
+                        figureNumber={2}
+                        figureDescription="Ullamcorper nulla non metus auctor fringilla"
                     />
                 );
                 break;

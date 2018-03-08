@@ -1,6 +1,8 @@
 import React from "react";
 import _ from "lodash";
 
+import Caption from "./Caption";
+
 class TableComponent extends React.Component {
     componentDidMount() {
         console.log(this.props.data);
@@ -15,11 +17,17 @@ class TableComponent extends React.Component {
         ));
 
         return (
-            <div style={{ overflowX: "auto" }}>
-                <table>
-                    <thead>{thead}</thead>
-                    <tbody>{tbody}</tbody>
-                </table>
+            <div>
+                <div style={{ overflowX: "auto" }}>
+                    <table>
+                        <thead>{thead}</thead>
+                        <tbody>{tbody}</tbody>
+                    </table>
+                </div>
+                <Caption
+                    figureNumber={this.props.figureNumber}
+                    figureDescription={this.props.figureDescription}
+                />
             </div>
         );
     }

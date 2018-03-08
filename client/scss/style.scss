@@ -177,6 +177,7 @@ a:hover {
 }
 
 .measure,
+.caption,
 h1,
 h2,
 h3,
@@ -248,6 +249,17 @@ tr {
 
 tbody tr:nth-child(odd) {
     background-color: #f5f7fa;
+}
+
+.caption {
+    font-size: 0.8rem;
+    color: #4e5052;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.italic {
+    font-style: italic;
 }
 
 @media screen and (max-width: 640px) {

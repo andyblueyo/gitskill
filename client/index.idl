@@ -40,7 +40,7 @@
     [/Text]
 
     [NotDesktop]
-        [Terminal /]
+        [Terminal figureNumber:1 figureDescription:"Cras mattis consectetur purus sit amet fermentum" /]
     [/NotDesktop]
 
     [Heading is:"h2"]
@@ -52,7 +52,7 @@
     [/Text]
 
     [NotDesktop]
-        [TableComponent columns:`["userType", "publicRepos", "orgs", "ownerType", "stars", "forks", "Java"]` data:prePrepData /]
+        [TableComponent columns:`["userType", "publicRepos", "orgs", "ownerType", "stars", "forks", "Java"]` data:prePrepData figureNumber:2 figureDescription:"Ullamcorper nulla non metus auctor fringilla" /]
     [/NotDesktop]
 
     [Heading is:"h2"]
