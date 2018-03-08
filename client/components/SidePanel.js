@@ -31,7 +31,7 @@ class SidePanel extends React.Component {
                 content = (
                     <Terminal
                         figureNumber={1}
-                        figureDescription="Cras mattis consectetur purus sit amet fermentum"
+                        figureDescription="Our team member, Evan, wrote a script that would allow us to call data from the API using a Round Robin API token scraping method"
                     />
                 );
                 break;
