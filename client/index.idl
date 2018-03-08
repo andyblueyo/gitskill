@@ -10,7 +10,7 @@
 
     [Subhead authors:`[{ name: "Andrea Chen", url: "https://github.com/abchen" }, { name: "Danish Bashar", url: "https://github.com/NegativeRainbow" }, { name: "Evan Frawley", url: "https://github.com/evanfrawley" }, {  name: "Paul Vaden", url: "https://github.com/paulvaden" }, { name: "Vincent van der Meulen", url: "https://github.com/vincentmvdm"}]` /]   
 
-    [Text]
+    [Text onEnterView:`sidePanelView = "initial"`]
         GitHub is a great way to see work that has been shared in the community. Public repositories allow others to explore projects as well as view how the code is written. A popular metric of popularity for a project on GitHub are stars, where users can show support by marking repositories with a star. A star on a repository allow users to find this repository easier later, allows GitHub to recommend more similar repositories, and most importantly, increases the popularity of this repository for GitHub’s Explore page, where repositories are featured to the developer community. 
     [/Text]
 
@@ -36,11 +36,11 @@
         To collect our data, we used GitHub’s API. Over a span of a week, our team made 250,000 API requests to GitHub’s API service. This ensured that the data we were collecting about users and repositories stayed within our code of conduct with GitHub’s data usage. 
     [/Text]
 
-    [Text onEnterViewFully:`sidePanelView = "terminal"`]
+    [Text]
         Our team member, Evan, wrote a script that would allow us to call data from the API using a Round Robin API token scraping method. 
     [/Text]
 
-    [Text]
+    [Text onEnterViewFully:`sidePanelView = "terminal"`]
         Afterwards, we stored our data in a Mongo database, since it would allow us to easily access the data. 
     [/Text]
 
@@ -52,7 +52,7 @@
         Structuring the Information
     [/Heading]
 
-    [Text onEnterViewFully:`sidePanelView = "prePrepData"`]
+    [Text]
        The data we had collected from GitHub’s API was stored in a Mongo Database for ease of storage and speed with being able to access the data. Because our team, largely did not know Mongo’s database well, Evan was able to also provide the JSON of the collected data. 
     [/Text]
 
@@ -60,7 +60,7 @@
         Being able to access the data in a JSON format allowed our team to read in the JSON file, wrangle the data, and output a CSV we would use for our models. 
     [/Text]
 
-    [Text]
+    [Text onEnterViewFully:`sidePanelView = "prePrepData"`]
         Using R’s jsonlite library allowed us to read the JSON file, flatten the data, and unlist columns that contained multiple lists of data. For this project, our languages column in our repo.json file was a list that contained dataframe of two columns: language and lines. We used Hadley Wickham’s tidyr library, as well as our own private functions to reshape the data to create models and visualizations. 
     [/Text]
 
@@ -72,11 +72,11 @@
         A Quick Glance at the Data
     [/Heading]
 
-    [Text onEnterViewFully:`sidePanelView = "langFrequency"`]
+    [Text]
         Our dataset was relatively small compared to the number of public repos available on GitHub. However for this project, the size of our data was sufficient to suit our needs. Below are some quick numbers that shape our dataset. 
     [/Text]
 
-    [List items:`["Around 316 coding languages represented, even unusual ones like Dogescript", "Around 157,807 repositories present in our data"]` /]
+    [List onEnterViewFully:`sidePanelView = "langFrequency"` items:`["Around 316 coding languages represented, even unusual ones like Dogescript", "Around 157,807 repositories present in our data"]` /]
 
     [NotDesktop]
         [Image src:"images/langFrequency.png" figureNumber:42 figureDescription:"Test" /]
@@ -98,7 +98,7 @@
         One of the biggest challenge was doing the machine learning itself. Our team member, Paul, explored a wide variety of models such as K Nearest Neighbors and Linear Regression. Eventually, after tuning our parameters, we found the Random Forest Model to be one of our best performing models as seen from it’s scoring using the Negative Log Loss metric. Despite it performing well, at predicting how many stars a user or organizations repo would have, the actual numbers were still far estimates. Despite this our model still was a success, since it was able to predict at least within the ballpark of the actual star count. 
     [/Text]
 
-    [Heading is:"h2"]
+    [Heading is:"h2" onEnterViewFully:`sidePanelView = "predAct"`]
         Predicting the Future
     [/Heading]
 
@@ -115,7 +115,7 @@
         Overall, it seems to be doable to predict the number of star a repo earns based on languages, lines of code, and number of past repos. We still have quite a ways to continue with refining our models, but we are excited to continue looking into other ways to optimize our data.
     [/Text]
 
-    [Monospace]
+    [Monospace onEnterViewFully:`sidePanelView = "predError"`]
         git commit -m "fin"
     [/Monospace]
 
