@@ -3,17 +3,22 @@
     "version": "1.0.0",
     "license": "MIT",
     "scripts": {
-        "start": "idyll index.idl --layout none --theme none --defaultComponents=components/default --css style.css --watch",
-        "build": "idyll index.idl --layout none --theme none --defaultComponents=components/default --css style.css; cp -r {images,fonts} build/;",
+        "start": "./node_modules/.bin/idyll index.idl --layout none --theme none --defaultComponents=components/default --css style.css --watch",
+        "build": "./node_modules/.bin/idyll index.idl --layout none --theme none --defaultComponents=components/default --css style.css; cp -r {images,fonts} build/;",
         "deploy": "npm run build && gh-pages -d ./build"
     },
     "dependencies": {
         "d3": "^4.0.0",
         "gulp": "^3.9.1",
         "gulp-sass": "^3.1.0",
+<<<<<<< HEAD
         "idyll": "^2.1.7",
         "idyll-d3-component": "^2.0.0",
         "moment": "^2.21.0"
+=======
+        "idyll": "2.1.7",
+        "idyll-d3-component": "2.0.3"
+>>>>>>> working client
     },
     "devDependencies": {
         "gh-pages": "^0.12.0"

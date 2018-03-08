@@ -489,7 +489,7 @@ babel-plugin-syntax-flow@^6.18.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-flow/-/babel-plugin-syntax-flow-6.18.0.tgz#4c3ab20a2af26aa20cd25995c398c4eb70310c8d"
 
-babel-plugin-syntax-jsx@^6.3.13, babel-plugin-syntax-jsx@^6.8.0:
+babel-plugin-syntax-jsx@6.18.0, babel-plugin-syntax-jsx@^6.3.13, babel-plugin-syntax-jsx@^6.8.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz#0af32a9a6e13ca7a3fd5069e62d7b0f58d0d8946"
 
@@ -881,7 +881,7 @@ babel-traverse@^6.24.1, babel-traverse@^6.26.0:
     invariant "^2.2.2"
     lodash "^4.17.4"
 
-babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0:
+babel-types@6.26.0, babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-types/-/babel-types-6.26.0.tgz#a3b073f94ab49eb6fa55cd65227a334380632497"
   dependencies:
@@ -1474,8 +1474,8 @@ combined-stream@1.0.6, combined-stream@^1.0.5, combined-stream@~1.0.5:
     delayed-stream "~1.0.0"
 
 commander@2, commander@^2.2.0, commander@^2.9.0:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.14.1.tgz#2235123e37af8ca3c65df45b026dbd357b01b9aa"
+  version "2.15.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.15.0.tgz#ad2a23a1c3b036e392469b8012cec6b33b4c1322"
 
 commander@2.9.0:
   version "2.9.0"
@@ -1549,7 +1549,7 @@ constants-browserify@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/constants-browserify/-/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
 
-convert-source-map@^1.5.0, convert-source-map@^1.5.1:
+convert-source-map@1.5.1, convert-source-map@^1.5.0, convert-source-map@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.5.1.tgz#b8278097b9bc229365de5c62cf5fcaed8b5599e5"
 
@@ -3037,8 +3037,8 @@ homedir-polyfill@^1.0.0, homedir-polyfill@^1.0.1:
     parse-passwd "^1.0.0"
 
 hosted-git-info@^2.1.4:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.5.0.tgz#6d60e34b3abbc8313062c3b798ef8d901a07af3c"
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.6.0.tgz#23235b29ab230c576aab0d4f13fc046b0b038222"
 
 html-tags@^1.1.1:
   version "1.2.0"
@@ -3109,8 +3109,8 @@ iconv-lite@0.4, iconv-lite@~0.4.13:
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
 idyll-compiler@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/idyll-compiler/-/idyll-compiler-2.1.1.tgz#bd683c923b29e7ffd5204b29838d44da748c7d16"
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/idyll-compiler/-/idyll-compiler-2.3.0.tgz#7c1e9a9784537dd590332f6340538359bc79c467"
   dependencies:
     gray-matter "^3.1.1"
     lex "^1.7.9"
@@ -3118,8 +3118,8 @@ idyll-compiler@^2.1.1:
     smartquotes "^2.0.0"
 
 idyll-components@^2.1.6:
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/idyll-components/-/idyll-components-2.1.6.tgz#bfc788252442149e5bce11b3a8d1aae80d4dcabf"
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/idyll-components/-/idyll-components-2.3.0.tgz#78a34a1a1d4c5fa584a10a51e69224a9d5a83fc4"
   dependencies:
     d3-array "^1.2.0"
     d3-drag "^1.1.1"
@@ -3132,34 +3132,37 @@ idyll-components@^2.1.6:
     react-table "^6.6.0"
     victory "^0.23.0"
 
-idyll-d3-component@^2.0.0:
+idyll-d3-component@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/idyll-d3-component/-/idyll-d3-component-2.0.3.tgz#79c4fbbbe5e5d59d9e61e16529b433923b6f6dfe"
 
 idyll-document@^2.1.7:
-  version "2.1.7"
-  resolved "https://registry.yarnpkg.com/idyll-document/-/idyll-document-2.1.7.tgz#ebaaf6bebb369ccc00e6a4b6cdbfe8c5edd499b9"
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/idyll-document/-/idyll-document-2.3.0.tgz#b42f0760503d3e74f41d7c408ebd8575a6bf7430"
   dependencies:
     change-case "^3.0.1"
     cross-env "^5.0.5"
     html-tags "^2.0.0"
+    idyll-layouts "^2.3.0"
+    idyll-themes "^2.1.1"
     object.entries "^1.0.4"
     object.values "^1.0.4"
     react-dom-factories "^1.0.1"
     scrollmonitor "^1.2.3"
     scrollparent "^2.0.1"
+    styled-jsx "^2.2.4"
 
-idyll-layouts@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/idyll-layouts/-/idyll-layouts-2.1.1.tgz#a0da9710f8176f99d8cec552de0076e8fa3c165f"
+idyll-layouts@^2.1.1, idyll-layouts@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/idyll-layouts/-/idyll-layouts-2.3.0.tgz#bc1f6e9f72c36d8fdc96bad7a9f8ef1831a05357"
 
 idyll-themes@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/idyll-themes/-/idyll-themes-2.1.1.tgz#43a72f5f17ac92a667155762376183fa7655070c"
 
-idyll@^2.1.7:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/idyll/-/idyll-2.2.0.tgz#0746d7e94d5af64c9e88dedaf70f8e1d58865400"
+idyll@2.1.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/idyll/-/idyll-2.1.7.tgz#2bde19e1a39424f1d8baf2e5a647fe464583a31a"
   dependencies:
     babel-preset-env "^1.6.0"
     babel-preset-react "^6.22.0"
@@ -5534,6 +5537,10 @@ source-map-url@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/source-map-url/-/source-map-url-0.4.0.tgz#3e935d7ddd73631b97659956d55128e87b5084a3"
 
+source-map@0.6.1, source-map@~0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+
 source-map@^0.4.2:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.4.4.tgz#eba4f5da9c0dc999de68032d8b4f76173652036b"
@@ -5543,10 +5550,6 @@ source-map@^0.4.2:
 source-map@^0.5.1, source-map@^0.5.6, source-map@^0.5.7, source-map@~0.5.1, source-map@~0.5.3:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
-
-source-map@~0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
 
 sparkles@^1.0.0:
   version "1.0.0"
@@ -5612,8 +5615,8 @@ static-extend@^0.1.1:
     object-copy "^0.1.0"
 
 static-module@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/static-module/-/static-module-2.2.0.tgz#db9bb7b95792b4819a2239e4b169ceacf847ada4"
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/static-module/-/static-module-2.2.2.tgz#496e9bf1d29cb5177a30fae224511953d7dd291b"
   dependencies:
     concat-stream "~1.6.0"
     convert-source-map "^1.5.1"
@@ -5685,6 +5688,10 @@ stream-throttle@^0.1.3:
   dependencies:
     commander "^2.2.0"
     limiter "^1.0.5"
+
+string-hash@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/string-hash/-/string-hash-1.1.3.tgz#e8aafc0ac1855b4666929ed7dd1275df5d6c811b"
 
 string-width@^1.0.1, string-width@^1.0.2:
   version "1.0.2"
@@ -5761,6 +5768,26 @@ strip-indent@^1.0.1:
 strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
+
+styled-jsx@^2.2.4:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/styled-jsx/-/styled-jsx-2.2.5.tgz#3eb98418720655421bfc1a680e2add581726a5e6"
+  dependencies:
+    babel-plugin-syntax-jsx "6.18.0"
+    babel-types "6.26.0"
+    convert-source-map "1.5.1"
+    source-map "0.6.1"
+    string-hash "1.1.3"
+    stylis "3.4.10"
+    stylis-rule-sheet "0.0.8"
+
+stylis-rule-sheet@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/stylis-rule-sheet/-/stylis-rule-sheet-0.0.8.tgz#b0d0a126c945b1f3047447a3aae0647013e8d166"
+
+stylis@3.4.10:
+  version "3.4.10"
+  resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.4.10.tgz#a135cab4b9ff208e327fbb5a6fde3fa991c638ee"
 
 subarg@^1.0.0:
   version "1.0.0"
