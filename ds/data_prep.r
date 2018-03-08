@@ -31,7 +31,7 @@ for(language in df_repo$languages){
             }
         }
     }
-    
+  print(index)
   index <- index + 1
 }
 
@@ -56,5 +56,6 @@ user_data_df <- data.frame(user_data_flat[, c( "ownerName", "userType","publicRe
 merged_dfs <- merge(user_data_df, df_repo2, by = "ownerName", all = TRUE) %>% apply(2,as.character)
 
 write.csv(x = merged_dfs, file = "./data/merged_data.csv")
+
 colnames(df4)
 View(df_repo)
