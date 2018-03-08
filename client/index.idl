@@ -4,11 +4,13 @@
 
 [Page]
 
-    [Heading is:"h1"] 
+    [Heading is:"h1"]
         The Key to Authoring a Popular GitHub Repository
     [/Heading]
 
-    [Subhead authors:`[{ name: "Andrea Chen", url: "https://github.com/abchen" }, { name: "Danish Bashar", url: "https://github.com/NegativeRainbow" }, { name: "Evan Frawley", url: "https://github.com/evanfrawley" }, {  name: "Paul Vaden", url: "https://github.com/paulvaden" }, { name: "Vincent van der Meulen", url: "https://github.com/vincentmvdm"}]` /]   
+    [chart data:"./data/feature_importances.json" type:"pie" /]
+
+    [Subhead authors:`[{ name: "Andrea Chen", url: "https://github.com/abchen" }, { name: "Danish Bashar", url: "https://github.com/NegativeRainbow" }, { name: "Evan Frawley", url: "https://github.com/evanfrawley" }, {  name: "Paul Vaden", url: "https://github.com/paulvaden" }, { name: "Vincent van der Meulen", url: "https://github.com/vincentmvdm"}]` /]
 
     [Text]
         Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.

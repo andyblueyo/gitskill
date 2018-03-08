@@ -1,0 +1,1282 @@
+[
+  {
+    "feature": "forks",
+    "importance": 0.7805705493192309
+  },
+  {
+    "feature": "Hack",
+    "importance": 0.030968467154430065
+  },
+  {
+    "feature": "C++",
+    "importance": 0.029852435591892105
+  },
+  {
+    "feature": "Go",
+    "importance": 0.016632939328546207
+  },
+  {
+    "feature": "Assembly",
+    "importance": 0.016458353470917227
+  },
+  {
+    "feature": "Lasso",
+    "importance": 0.014697369591441084
+  },
+  {
+    "feature": "LLVM",
+    "importance": 0.009086231777793743
+  },
+  {
+    "feature": "ANTLR",
+    "importance": 0.008570591762916894
+  },
+  {
+    "feature": "UnrealScript",
+    "importance": 0.00819189483054735
+  },
+  {
+    "feature": "Stan",
+    "importance": 0.008005757549823968
+  },
+  {
+    "feature": "Smali",
+    "importance": 0.006534267242476847
+  },
+  {
+    "feature": "Processing",
+    "importance": 0.00450940665220679
+  },
+  {
+    "feature": "Ragel",
+    "importance": 0.00361446208447741
+  },
+  {
+    "feature": "XS",
+    "importance": 0.0035412292356815657
+  },
+  {
+    "feature": "publicRepos",
+    "importance": 0.0031912485451754944
+  },
+  {
+    "feature": "Scala",
+    "importance": 0.003074621633724729
+  },
+  {
+    "feature": "Vim script",
+    "importance": 0.0027972088101780746
+  },
+  {
+    "feature": "Haskell",
+    "importance": 0.0025972832511592637
+  },
+  {
+    "feature": "Kotlin",
+    "importance": 0.0020359236511293946
+  },
+  {
+    "feature": "Gnuplot",
+    "importance": 0.0019613933664497556
+  },
+  {
+    "feature": "PowerShell",
+    "importance": 0.00189461208891915
+  },
+  {
+    "feature": "TypeScript",
+    "importance": 0.0017606222420485404
+  },
+  {
+    "feature": "Standard ML",
+    "importance": 0.00163319614980311
+  },
+  {
+    "feature": "R",
+    "importance": 0.001628483503589895
+  },
+  {
+    "feature": "VHDL",
+    "importance": 0.0015830574768062597
+  },
+  {
+    "feature": "Lua",
+    "importance": 0.0015499265305624474
+  },
+  {
+    "feature": "Groovy",
+    "importance": 0.0015237497236689145
+  },
+  {
+    "feature": "Batchfile",
+    "importance": 0.0014661222013535404
+  },
+  {
+    "feature": "XQuery",
+    "importance": 0.0014656996583272534
+  },
+  {
+    "feature": "QML",
+    "importance": 0.0014026261537432331
+  },
+  {
+    "feature": "Matlab",
+    "importance": 0.0013126008052171717
+  },
+  {
+    "feature": "Gherkin",
+    "importance": 0.0012466675898898257
+  },
+  {
+    "feature": "Smalltalk",
+    "importance": 0.0011797199111518069
+  },
+  {
+    "feature": "AspectJ",
+    "importance": 0.001143120266700842
+  },
+  {
+    "feature": "Jupyter Notebook",
+    "importance": 0.001141719303024287
+  },
+  {
+    "feature": "SourcePawn",
+    "importance": 0.001074630279946531
+  },
+  {
+    "feature": "Swift",
+    "importance": 0.000905221642109822
+  },
+  {
+    "feature": "Ruby",
+    "importance": 0.0008366881863854428
+  },
+  {
+    "feature": "Roff",
+    "importance": 0.0008348551265855065
+  },
+  {
+    "feature": "AngelScript",
+    "importance": 0.0008068893143446178
+  },
+  {
+    "feature": "Rust",
+    "importance": 0.0008054128486823177
+  },
+  {
+    "feature": "CoffeeScript",
+    "importance": 0.0007290101553231091
+  },
+  {
+    "feature": "Perl 6",
+    "importance": 0.0007195392700917253
+  },
+  {
+    "feature": "Shell",
+    "importance": 0.0006925551705690632
+  },
+  {
+    "feature": "PLpgSQL",
+    "importance": 0.0006910732485602429
+  },
+  {
+    "feature": "POV-Ray SDL",
+    "importance": 0.0006895124275045142
+  },
+  {
+    "feature": "Dart",
+    "importance": 0.0006587165384176503
+  },
+  {
+    "feature": "Objective-C",
+    "importance": 0.0006392509205502287
+  },
+  {
+    "feature": "JavaScript",
+    "importance": 0.0006330127496814597
+  },
+  {
+    "feature": "C",
+    "importance": 0.0005876486047134251
+  },
+  {
+    "feature": "Java",
+    "importance": 0.0005309434965072196
+  },
+  {
+    "feature": "HTML",
+    "importance": 0.00047701177902299363
+  },
+  {
+    "feature": "Tcl",
+    "importance": 0.0004729120600640486
+  },
+  {
+    "feature": "Python",
+    "importance": 0.0004461837294335208
+  },
+  {
+    "feature": "OCaml",
+    "importance": 0.0003743404279189347
+  },
+  {
+    "feature": "FLUX",
+    "importance": 0.00034134427719677355
+  },
+  {
+    "feature": "ASP",
+    "importance": 0.0003374256166444226
+  },
+  {
+    "feature": "XML",
+    "importance": 0.0003313511840805556
+  },
+  {
+    "feature": "GDB",
+    "importance": 0.0003196800848459416
+  },
+  {
+    "feature": "Terra",
+    "importance": 0.0003124064438862147
+  },
+  {
+    "feature": "Thrift",
+    "importance": 0.00029915628540363396
+  },
+  {
+    "feature": "QMake",
+    "importance": 0.0002985145875409346
+  },
+  {
+    "feature": "GAP",
+    "importance": 0.0002737806277778443
+  },
+  {
+    "feature": "Handlebars",
+    "importance": 0.00025481222126183973
+  },
+  {
+    "feature": "Clojure",
+    "importance": 0.00025324463435159503
+  },
+  {
+    "feature": "Groff",
+    "importance": 0.0002299134110508782
+  },
+  {
+    "feature": "CSS",
+    "importance": 0.00022576870206780385
+  },
+  {
+    "feature": "Visual Basic",
+    "importance": 0.0002114454482689522
+  },
+  {
+    "feature": "PHP",
+    "importance": 0.00020579020256050604
+  },
+  {
+    "feature": "Makefile",
+    "importance": 0.00018231926708569266
+  },
+  {
+    "feature": "Mathematica",
+    "importance": 0.00017249689239931076
+  },
+  {
+    "feature": "DTrace",
+    "importance": 0.00016967114429464642
+  },
+  {
+    "feature": "Perl",
+    "importance": 0.00016093515396558406
+  },
+  {
+    "feature": "Protocol Buffer",
+    "importance": 0.00015812983443956832
+  },
+  {
+    "feature": "AGS Script",
+    "importance": 0.00015789814607444387
+  },
+  {
+    "feature": "Mako",
+    "importance": 0.00013848400361798446
+  },
+  {
+    "feature": "Objective-C++",
+    "importance": 0.00013645716456469852
+  },
+  {
+    "feature": "HCL",
+    "importance": 0.00012787783331407474
+  },
+  {
+    "feature": "Smarty",
+    "importance": 0.00012157228280865426
+  },
+  {
+    "feature": "Vue",
+    "importance": 0.00011752999880465013
+  },
+  {
+    "feature": "ApacheConf",
+    "importance": 0.00011536866097845322
+  },
+  {
+    "feature": "F#",
+    "importance": 0.00011000938419549315
+  },
+  {
+    "feature": "Lex",
+    "importance": 0.00010194542420372869
+  },
+  {
+    "feature": "C#",
+    "importance": 0.00010017132763488777
+  },
+  {
+    "feature": "D",
+    "importance": 0.00009108566207362537
+  },
+  {
+    "feature": "ActionScript",
+    "importance": 0.00008580880093822396
+  },
+  {
+    "feature": "Puppet",
+    "importance": 0.0000819827005592271
+  },
+  {
+    "feature": "CMake",
+    "importance": 0.0000784129812608597
+  },
+  {
+    "feature": "Scilab",
+    "importance": 0.00007352236578529412
+  },
+  {
+    "feature": "Awk",
+    "importance": 0.00007220618925047988
+  },
+  {
+    "feature": "Fancy",
+    "importance": 0.00006502949056777143
+  },
+  {
+    "feature": "Fortran",
+    "importance": 0.000058442558639468615
+  },
+  {
+    "feature": "Elixir",
+    "importance": 0.00005436067578599913
+  },
+  {
+    "feature": "Crystal",
+    "importance": 0.00004972123188171225
+  },
+  {
+    "feature": "Nix",
+    "importance": 0.00004932624204466416
+  },
+  {
+    "feature": "AMPL",
+    "importance": 0.000045722724562014215
+  },
+  {
+    "feature": "Emacs Lisp",
+    "importance": 0.00004478886217774206
+  },
+  {
+    "feature": "Nginx",
+    "importance": 0.00004277952982306031
+  },
+  {
+    "feature": "DIGITAL Command Language",
+    "importance": 0.00004223615558495067
+  },
+  {
+    "feature": "VCL",
+    "importance": 0.0000416221490258438
+  },
+  {
+    "feature": "ownerType_User",
+    "importance": 0.00004127695554060705
+  },
+  {
+    "feature": "M4",
+    "importance": 0.00003760837801324726
+  },
+  {
+    "feature": "FreeMarker",
+    "importance": 0.00003522082715241497
+  },
+  {
+    "feature": "Yacc",
+    "importance": 0.00003500187121645003
+  },
+  {
+    "feature": "IDL",
+    "importance": 0.000027292925638861498
+  },
+  {
+    "feature": "Erlang",
+    "importance": 0.000026747845541889797
+  },
+  {
+    "feature": "XSLT",
+    "importance": 0.00002606691512063049
+  },
+  {
+    "feature": "Inno Setup",
+    "importance": 0.00002301860790699044
+  },
+  {
+    "feature": "Cuda",
+    "importance": 0.000019601840242557407
+  },
+  {
+    "feature": "Pascal",
+    "importance": 0.0000192110595677086
+  },
+  {
+    "feature": "LiveScript",
+    "importance": 0.00001703261446126391
+  },
+  {
+    "feature": "Ada",
+    "importance": 0.00001597628050651083
+  },
+  {
+    "feature": "Idris",
+    "importance": 0.000013812993045308218
+  },
+  {
+    "feature": "NSIS",
+    "importance": 0.000013648200361030525
+  },
+  {
+    "feature": "Elm",
+    "importance": 0.000013348622858897815
+  },
+  {
+    "feature": "Brightscript",
+    "importance": 0.000012922228276449217
+  },
+  {
+    "feature": "PostScript",
+    "importance": 0.000012242379208671184
+  },
+  {
+    "feature": "PureBasic",
+    "importance": 0.000011972085668095825
+  },
+  {
+    "feature": "ownerType_Organization",
+    "importance": 0.000011702336678672232
+  },
+  {
+    "feature": "Liquid",
+    "importance": 0.000011249548381304366
+  },
+  {
+    "feature": "Graphviz (DOT)",
+    "importance": 0.000010956828540454715
+  },
+  {
+    "feature": "TeX",
+    "importance": 0.000010791352855587978
+  },
+  {
+    "feature": "Haxe",
+    "importance": 0.00001036686991197331
+  },
+  {
+    "feature": "AppleScript",
+    "importance": 0.000010172318307256587
+  },
+  {
+    "feature": "Prolog",
+    "importance": 0.000009389232742893
+  },
+  {
+    "feature": "Julia",
+    "importance": 0.000008847426958762108
+  },
+  {
+    "feature": "SQLPL",
+    "importance": 0.000008529922991775123
+  },
+  {
+    "feature": "ShaderLab",
+    "importance": 0.000007384663691239539
+  },
+  {
+    "feature": "PLSQL",
+    "importance": 0.000007211762394867795
+  },
+  {
+    "feature": "Mask",
+    "importance": 0.000007000254159123346
+  },
+  {
+    "feature": "SaltStack",
+    "importance": 0.0000068525307293179855
+  },
+  {
+    "feature": "Max",
+    "importance": 0.000006839217463990976
+  },
+  {
+    "feature": "Bison",
+    "importance": 0.000006583580535565972
+  },
+  {
+    "feature": "GLSL",
+    "importance": 0.00000610036757177548
+  },
+  {
+    "feature": "Scheme",
+    "importance": 0.0000060914802412699314
+  },
+  {
+    "feature": "Oxygene",
+    "importance": 0.000005815299904189372
+  },
+  {
+    "feature": "Vala",
+    "importance": 0.000005497777821167111
+  },
+  {
+    "feature": "Mercury",
+    "importance": 0.000005460982777489113
+  },
+  {
+    "feature": "Mirah",
+    "importance": 0.000005280712691990674
+  },
+  {
+    "feature": "ColdFusion",
+    "importance": 0.000004939071349647221
+  },
+  {
+    "feature": "TLA",
+    "importance": 0.000004635397807564471
+  },
+  {
+    "feature": "Arduino",
+    "importance": 0.000004041027909239261
+  },
+  {
+    "feature": "OpenEdge ABL",
+    "importance": 0.000003597006523074047
+  },
+  {
+    "feature": "Meson",
+    "importance": 0.000003300324623059388
+  },
+  {
+    "feature": "Ragel in Ruby Host",
+    "importance": 0.0000026865814396372745
+  },
+  {
+    "feature": "SAS",
+    "importance": 0.000002626026374386666
+  },
+  {
+    "feature": "API Blueprint",
+    "importance": 0.0000025999405708393566
+  },
+  {
+    "feature": "Nearley",
+    "importance": 0.000002567349780132717
+  },
+  {
+    "feature": "Inform 7",
+    "importance": 0.0000024120260474245317
+  },
+  {
+    "feature": "Boo",
+    "importance": 0.000002235129592406716
+  },
+  {
+    "feature": "Racket",
+    "importance": 0.0000021965727444713655
+  },
+  {
+    "feature": "SuperCollider",
+    "importance": 0.0000020053672484788045
+  },
+  {
+    "feature": "Forth",
+    "importance": 0.0000013707935511393624
+  },
+  {
+    "feature": "PigLatin",
+    "importance": 0.0000011168242249059797
+  },
+  {
+    "feature": "RPC",
+    "importance": 0.0000010605398611444514
+  },
+  {
+    "feature": "Logos",
+    "importance": 0.000001043563869156868
+  },
+  {
+    "feature": "Eiffel",
+    "importance": 0.0000010098085445215357
+  },
+  {
+    "feature": "E",
+    "importance": 9.294719840179052e-7
+  },
+  {
+    "feature": "Coq",
+    "importance": 8.598839308998518e-7
+  },
+  {
+    "feature": "Cap'n Proto",
+    "importance": 8.023850660098506e-7
+  },
+  {
+    "feature": "HLSL",
+    "importance": 8.014815599685385e-7
+  },
+  {
+    "feature": "GCC Machine Description",
+    "importance": 6.915273260838299e-7
+  },
+  {
+    "feature": "Pure Data",
+    "importance": 5.743215492347281e-7
+  },
+  {
+    "feature": "M",
+    "importance": 5.730481271764872e-7
+  },
+  {
+    "feature": "SRecode Template",
+    "importance": 5.153084034022962e-7
+  },
+  {
+    "feature": "Nim",
+    "importance": 4.5979616637740293e-7
+  },
+  {
+    "feature": "RenderScript",
+    "importance": 4.5689904971796213e-7
+  },
+  {
+    "feature": "mupad",
+    "importance": 4.512167706926854e-7
+  },
+  {
+    "feature": "Common Lisp",
+    "importance": 4.187651843644505e-7
+  },
+  {
+    "feature": "xBase",
+    "importance": 3.3200397729810613e-7
+  },
+  {
+    "feature": "Hy",
+    "importance": 3.2755662954035546e-7
+  },
+  {
+    "feature": "Clarion",
+    "importance": 3.272185086012787e-7
+  },
+  {
+    "feature": "Rebol",
+    "importance": 2.613547868437541e-7
+  },
+  {
+    "feature": "PureScript",
+    "importance": 2.6080682561978215e-7
+  },
+  {
+    "feature": "Apex",
+    "importance": 2.60707238736895e-7
+  },
+  {
+    "feature": "COBOL",
+    "importance": 2.5718693315083146e-7
+  },
+  {
+    "feature": "J",
+    "importance": 2.137434026671593e-7
+  },
+  {
+    "feature": "Objective-J",
+    "importance": 1.9462702074774142e-7
+  },
+  {
+    "feature": "Module Management System",
+    "importance": 1.910578570035129e-7
+  },
+  {
+    "feature": "OpenSCAD",
+    "importance": 1.7724459567724332e-7
+  },
+  {
+    "feature": "Brainfuck",
+    "importance": 1.7332254643607902e-7
+  },
+  {
+    "feature": "CLIPS",
+    "importance": 1.7094619156290187e-7
+  },
+  {
+    "feature": "MAXScript",
+    "importance": 1.6853290183616795e-7
+  },
+  {
+    "feature": "Web Ontology Language",
+    "importance": 1.3961528106477794e-7
+  },
+  {
+    "feature": "SQL",
+    "importance": 1.362899467865157e-7
+  },
+  {
+    "feature": "GDScript",
+    "importance": 1.3202742338081116e-7
+  },
+  {
+    "feature": "Gosu",
+    "importance": 1.2351781606279606e-7
+  },
+  {
+    "feature": "Eagle",
+    "importance": 1.0281117263447679e-7
+  },
+  {
+    "feature": "NewLisp",
+    "importance": 9.025516848553098e-8
+  },
+  {
+    "feature": "Diff",
+    "importance": 8.254801803865944e-8
+  },
+  {
+    "feature": "Nu",
+    "importance": 7.407716617937892e-8
+  },
+  {
+    "feature": "Verilog",
+    "importance": 7.367272415214348e-8
+  },
+  {
+    "feature": "nesC",
+    "importance": 7.263146308221124e-8
+  },
+  {
+    "feature": "Metal",
+    "importance": 6.334880344165515e-8
+  },
+  {
+    "feature": "Gettext Catalog",
+    "importance": 6.158181736690084e-8
+  },
+  {
+    "feature": "JSONiq",
+    "importance": 6.144368619554166e-8
+  },
+  {
+    "feature": "Augeas",
+    "importance": 6.048755838657609e-8
+  },
+  {
+    "feature": "CWeb",
+    "importance": 5.7547927269452927e-8
+  },
+  {
+    "feature": "Stata",
+    "importance": 5.5050086961769874e-8
+  },
+  {
+    "feature": "Volt",
+    "importance": 5.147437940652042e-8
+  },
+  {
+    "feature": "Component Pascal",
+    "importance": 4.5571135100603425e-8
+  },
+  {
+    "feature": "1C Enterprise",
+    "importance": 4.382838605881218e-8
+  },
+  {
+    "feature": "Solidity",
+    "importance": 4.313403888074207e-8
+  },
+  {
+    "feature": "SystemVerilog",
+    "importance": 4.24015917388039e-8
+  },
+  {
+    "feature": "KiCad Layout",
+    "importance": 3.5047478193825315e-8
+  },
+  {
+    "feature": "Agda",
+    "importance": 3.416836851747323e-8
+  },
+  {
+    "feature": "Frege",
+    "importance": 3.123345874558421e-8
+  },
+  {
+    "feature": "Io",
+    "importance": 2.548579207087249e-8
+  },
+  {
+    "feature": "Logtalk",
+    "importance": 2.5127456056319115e-8
+  },
+  {
+    "feature": "NetLogo",
+    "importance": 2.4391320314047755e-8
+  },
+  {
+    "feature": "AutoHotkey",
+    "importance": 2.2259233548492958e-8
+  },
+  {
+    "feature": "Zephir",
+    "importance": 2.1462609054767975e-8
+  },
+  {
+    "feature": "CartoCSS",
+    "importance": 2.084296393925992e-8
+  },
+  {
+    "feature": "ABAP",
+    "importance": 2.0736329307825796e-8
+  },
+  {
+    "feature": "LilyPond",
+    "importance": 1.577454835267735e-8
+  },
+  {
+    "feature": "BlitzBasic",
+    "importance": 1.3375027095149023e-8
+  },
+  {
+    "feature": "Limbo",
+    "importance": 1.3350408244967831e-8
+  },
+  {
+    "feature": "Slash",
+    "importance": 1.3161036337547e-8
+  },
+  {
+    "feature": "Nemerle",
+    "importance": 1.2886329992086884e-8
+  },
+  {
+    "feature": "PAWN",
+    "importance": 1.2736893872985818e-8
+  },
+  {
+    "feature": "WebIDL",
+    "importance": 1.2245123089019974e-8
+  },
+  {
+    "feature": "Turing",
+    "importance": 9.388003869272918e-9
+  },
+  {
+    "feature": "XProc",
+    "importance": 7.907268860632116e-9
+  },
+  {
+    "feature": "Clean",
+    "importance": 7.81838717290954e-9
+  },
+  {
+    "feature": "LSL",
+    "importance": 7.616527253978954e-9
+  },
+  {
+    "feature": "Xtend",
+    "importance": 7.151911846517589e-9
+  },
+  {
+    "feature": "RAML",
+    "importance": 6.315379452497782e-9
+  },
+  {
+    "feature": "APL",
+    "importance": 4.194865434519361e-9
+  },
+  {
+    "feature": "LOLCODE",
+    "importance": 3.9344936010747285e-9
+  },
+  {
+    "feature": "wisp",
+    "importance": 3.908333392664648e-9
+  },
+  {
+    "feature": "Oz",
+    "importance": 3.2447689702121784e-9
+  },
+  {
+    "feature": "Parrot",
+    "importance": 3.0380406921828324e-9
+  },
+  {
+    "feature": "GAMS",
+    "importance": 2.904873776774412e-9
+  },
+  {
+    "feature": "XC",
+    "importance": 2.8386556956667466e-9
+  },
+  {
+    "feature": "KRL",
+    "importance": 2.8171527537780382e-9
+  },
+  {
+    "feature": "RobotFramework",
+    "importance": 2.7423672484200394e-9
+  },
+  {
+    "feature": "Isabelle",
+    "importance": 2.63865718837864e-9
+  },
+  {
+    "feature": "WebAssembly",
+    "importance": 2.3361247150562326e-9
+  },
+  {
+    "feature": "MoonScript",
+    "importance": 2.0350985931366803e-9
+  },
+  {
+    "feature": "Pike",
+    "importance": 1.8801767263018592e-9
+  },
+  {
+    "feature": "Game Maker Language",
+    "importance": 1.6143227460838293e-9
+  },
+  {
+    "feature": "eC",
+    "importance": 1.371159741087065e-9
+  },
+  {
+    "feature": "Shen",
+    "importance": 1.310481158280427e-9
+  },
+  {
+    "feature": "Arc",
+    "importance": 1.034684426372367e-9
+  },
+  {
+    "feature": "Harbour",
+    "importance": 9.790763195542392e-10
+  },
+  {
+    "feature": "Bro",
+    "importance": 8.395815131849057e-10
+  },
+  {
+    "feature": "Jasmin",
+    "importance": 6.981741456509948e-10
+  },
+  {
+    "feature": "PicoLisp",
+    "importance": 5.321190401992715e-10
+  },
+  {
+    "feature": "Factor",
+    "importance": 4.958474780992478e-10
+  },
+  {
+    "feature": "Lean",
+    "importance": 4.3091480279654446e-10
+  },
+  {
+    "feature": "Cool",
+    "importance": 3.987672985290265e-10
+  },
+  {
+    "feature": "Rascal",
+    "importance": 3.9752474500569093e-10
+  },
+  {
+    "feature": "Grammatical Framework",
+    "importance": 2.2988788848713898e-10
+  },
+  {
+    "feature": "Cirru",
+    "importance": 2.1718545161060133e-10
+  },
+  {
+    "feature": "EmberScript",
+    "importance": 2.078230138652105e-10
+  },
+  {
+    "feature": "Csound",
+    "importance": 1.9873831023169918e-10
+  },
+  {
+    "feature": "Opa",
+    "importance": 1.797908005469417e-10
+  },
+  {
+    "feature": "Ceylon",
+    "importance": 1.5431987254313053e-10
+  },
+  {
+    "feature": "Modula-2",
+    "importance": 9.892029601517942e-11
+  },
+  {
+    "feature": "Myghty",
+    "importance": 8.44955414201227e-11
+  },
+  {
+    "feature": "Dogescript",
+    "importance": 7.654349116223221e-11
+  },
+  {
+    "feature": "BitBake",
+    "importance": 6.800280371341794e-11
+  },
+  {
+    "feature": "ChucK",
+    "importance": 3.412386363211077e-11
+  },
+  {
+    "feature": "Squirrel",
+    "importance": 2.9501640687793504e-11
+  },
+  {
+    "feature": "Pony",
+    "importance": 2.5392966655938195e-11
+  },
+  {
+    "feature": "Ioke",
+    "importance": 2.1343060886605755e-11
+  },
+  {
+    "feature": "REXX",
+    "importance": 2.0942600219860625e-11
+  },
+  {
+    "feature": "AutoIt",
+    "importance": 1.617479815101507e-11
+  },
+  {
+    "feature": "Alloy",
+    "importance": 1.3903459850094682e-11
+  },
+  {
+    "feature": "UrWeb",
+    "importance": 9.96110142758137e-12
+  },
+  {
+    "feature": "SQF",
+    "importance": 9.76268695821118e-12
+  },
+  {
+    "feature": "Modelica",
+    "importance": 7.965324981145441e-12
+  },
+  {
+    "feature": "Zimpl",
+    "importance": 6.533198703366746e-12
+  },
+  {
+    "feature": "Csound Document",
+    "importance": 5.513627789629584e-12
+  },
+  {
+    "feature": "XPages",
+    "importance": 2.2618030869603338e-12
+  },
+  {
+    "feature": "Csound Score",
+    "importance": 2.1763382629760717e-12
+  },
+  {
+    "feature": "IGOR Pro",
+    "importance": 1.6194388379121574e-12
+  },
+  {
+    "feature": "Ballerina",
+    "importance": 9.765156443490834e-13
+  },
+  {
+    "feature": "SMT",
+    "importance": 7.268298124707118e-13
+  },
+  {
+    "feature": "LabVIEW",
+    "importance": 2.692233870796621e-13
+  },
+  {
+    "feature": "Dylan",
+    "importance": 1.564335348744528e-13
+  },
+  {
+    "feature": "Genshi",
+    "importance": 1.2802591782050337e-13
+  },
+  {
+    "feature": "Nit",
+    "importance": 7.258495082116307e-14
+  },
+  {
+    "feature": "Rouge",
+    "importance": 5.456625242729337e-14
+  },
+  {
+    "feature": "Red",
+    "importance": 2.883651906089858e-14
+  },
+  {
+    "feature": "LookML",
+    "importance": 1.7661089529675657e-14
+  },
+  {
+    "feature": "TXL",
+    "importance": 6.277010479663085e-15
+  },
+  {
+    "feature": "NCL",
+    "importance": 0
+  },
+  {
+    "feature": "Monkey",
+    "importance": 0
+  },
+  {
+    "feature": "ooc",
+    "importance": 0
+  },
+  {
+    "feature": "Filebench WML",
+    "importance": 0
+  },
+  {
+    "feature": "Golo",
+    "importance": 0
+  },
+  {
+    "feature": "ShellSession",
+    "importance": 0
+  },
+  {
+    "feature": "X10",
+    "importance": 0
+  },
+  {
+    "feature": "Redcode",
+    "importance": 0
+  },
+  {
+    "feature": "Tea",
+    "importance": 0
+  },
+  {
+    "feature": "MQL5",
+    "importance": 0
+  },
+  {
+    "feature": "Moocode",
+    "importance": 0
+  },
+  {
+    "feature": "MQL4",
+    "importance": 0
+  },
+  {
+    "feature": "BlitzMax",
+    "importance": 0
+  },
+  {
+    "feature": "Fantom",
+    "importance": 0
+  },
+  {
+    "feature": "Chapel",
+    "importance": 0
+  },
+  {
+    "feature": "JFlex",
+    "importance": 0
+  },
+  {
+    "feature": "Papyrus",
+    "importance": 0
+  },
+  {
+    "feature": "Cycript",
+    "importance": 0
+  },
+  {
+    "feature": "HyPhy",
+    "importance": 0
+  },
+  {
+    "feature": "PogoScript",
+    "importance": 0
+  },
+  {
+    "feature": "Common Workflow Language",
+    "importance": 0
+  },
+  {
+    "feature": "Genie",
+    "importance": 0
+  },
+  {
+    "feature": "DM",
+    "importance": 0
+  },
+  {
+    "feature": "Click",
+    "importance": 0
+  },
+  {
+    "feature": "Pan",
+    "importance": 0
+  },
+  {
+    "feature": "Self",
+    "importance": 0
+  },
+  {
+    "feature": "Uno",
+    "importance": 0
+  },
+  {
+    "feature": "ATS",
+    "importance": 0
+  },
+  {
+    "feature": "Bluespec",
+    "importance": 0
+  },
+  {
+    "feature": "Propeller Spin",
+    "importance": 0
+  },
+  {
+    "feature": "ECL",
+    "importance": 0
+  },
+  {
+    "feature": "DCPU-16 ASM",
+    "importance": 0
+  },
+  {
+    "feature": "P4",
+    "importance": 0
+  }
+]
