@@ -106,16 +106,16 @@
         Although our models are still rough and need to be further refined, our outcomes, star count, from our best performing model, the Random Forest, was performing well enough to predict a star count that was within the ballpark of the actual star by at least a difference within a power of 10 for many of its cases. We also used GridSearchCV to find and determine the best parameters for our model. 
     [/Text]
 
-    [Text]
-        Overall, it seems to be doable to predict the number of star a repo earns based on languages, lines of code, and number of past repos. We still have quite a ways to continue with refining our models, but we are excited to continue looking into other ways to optimize our data.
-    [/Text]
-
     [NotDesktop]
         [Chart src:"images/predAct.svg" figureNumber:3 figureDescription:"Integer posuere erat a ante venenatis dapibus posuere velit aliquet" /]
 
-        [Chart src:"images/predError.svg" figureNumber:4 figureDescription:"Morbi leo risus, porta ac consectetur ac, vestibulum at eros" /]
+        [Image src:"images/predError.png" figureNumber:42 figureDescription:"Test" /]
     [/NotDesktop]
 
+    [Text]
+        Overall, it seems to be doable to predict the number of star a repo earns based on languages, lines of code, and number of past repos. We still have quite a ways to continue with refining our models, but we are excited to continue looking into other ways to optimize our data.
+    [/Text]
+    
     [Monospace]
         git commit -m "fin"
     [/Monospace]

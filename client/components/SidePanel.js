@@ -77,10 +77,10 @@ class SidePanel extends React.Component {
 
             case "predError":
                 content = (
-                    <Chart
-                        src="images/predError.svg"
-                        figureNumber={4}
-                        figureDescription="Morbi leo risus, porta ac consectetur ac, vestibulum at eros"
+                    <Image
+                        src="images/predError.png"
+                        figureNumber={42}
+                        figureDescription="Test"
                     />
                 );
                 break;
