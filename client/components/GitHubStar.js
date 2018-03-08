@@ -10,7 +10,7 @@ class GitHubStar extends React.Component {
     }
 
     componentDidMount() {
-        this.timerID = setInterval(() => this.tick(), 2000);
+        this.timerID = setInterval(() => this.tick(), 1000);
     }
 
     tick() {
