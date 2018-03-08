@@ -4,7 +4,7 @@
 
 [Page]
 
-    [Heading is:"h1" onEnterViewFully:`sidePanelView = "initial"`] 
+    [Heading is:"h1"] 
         The Key to Authoring a Popular GitHub Repository
     [/Heading]
 
@@ -26,7 +26,7 @@
         [GitHubStar /]
     [/NotDesktop]
 
-    [Heading is:"h2"  onEnterViewFully:`sidePanelView = "terminal"`]
+    [Heading is:"h2"]
         200,000 API requests
     [/Heading]
 
@@ -34,7 +34,7 @@
         Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
     [/Text]
 
-    [Text]
+    [Text onEnterViewFully:`sidePanelView = "terminal"`]
         Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper.
     [/Text]
 

@@ -38,6 +38,12 @@ $primary-color: #0066ff;
     font-weight: bold;
 }
 
+@font-face {
+    font-family: Menlo;
+    src: url("./fonts/Menlo-Regular.ttf");
+    font-weight: regular;
+}
+
 html,
 body {
     font-size: 20px;
@@ -209,6 +215,11 @@ p:last-of-type {
     align-items: center;
 }
 
+#terminal {
+    width: 100%;
+    max-width: 480px;
+}
+
 @media screen and (max-width: 640px) {
     .hide-xs {
         display: none;
@@ -252,6 +263,12 @@ p:last-of-type {
         top: 0;
         right: 10vw;
         width: calc((80vw - 600px) - 120px);
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    .hide-xl-temp {
+        display: none;
     }
 }
 
