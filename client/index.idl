@@ -1,4 +1,4 @@
-[meta title:"The Key to Having Meaningful Contributions to Github" description:"Predicting a GitHub repository's stars based on its features" /]
+[meta title:"The Key to Having Meaningful Contributions to Github" description:"Predicting a user or organization's stars based on their repo's features" /]
 
 [var name:"sidePanelView" value:"initial" /]
 [data name:"prePrepData" source:"prePrepData.json" /]
@@ -76,7 +76,7 @@
         Our dataset was relatively small compared to the number of public repos available on GitHub. However for this project, the size of our data was sufficient to suit our needs. Below are some quick numbers that shape our dataset. 
     [/Text]
 
-    [List onEnterViewFully:`sidePanelView = "langFrequency"` items:`["Around 316 coding languages represented, even unusual ones like Dogescript", "Around 157,807 repositories present in our data"]` /]
+    [List onEnterViewFully:`sidePanelView = "langFrequency"` items:`["Around 316 coding languages represented, even unusual ones like Dogescript", "Around 261,165 repositories present in our data"]` /]
 
     [NotDesktop]
         [Image src:"images/langFrequency.png" figureNumber:3 figureDescription:"The top 10 most used languages" /]
