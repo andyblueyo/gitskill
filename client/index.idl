@@ -59,7 +59,7 @@
         A Quick Glance at the Data
     [/Heading]
 
-    [Text]
+    [Text onEnterViewFully:`sidePanelView = "test"`]
         Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     [/Text]
 
@@ -78,6 +78,10 @@
     [Text]
         Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere consectetur est at lobortis.
     [/Text]
+
+    [NotDesktop]
+        [Chart src:"images/test.svg" figureNumber:3 figureDescription:"Integer posuere erat a ante venenatis dapibus posuere velit aliquet" /]
+    [/NotDesktop]
 
     [Heading is:"h2"]
         The Formula for Success

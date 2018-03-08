@@ -5,6 +5,7 @@ import Blockquote from "./Blockquote";
 import GitHubStar from "./GitHubStar";
 import Terminal from "./Terminal";
 import TableComponent from "./TableComponent";
+import Chart from "./Chart";
 
 class SidePanel extends React.Component {
     render() {
@@ -48,6 +49,16 @@ class SidePanel extends React.Component {
                         data={this.props.prePrepData}
                         figureNumber={2}
                         figureDescription="Ullamcorper nulla non metus auctor fringilla"
+                    />
+                );
+                break;
+
+            case "test":
+                content = (
+                    <Chart
+                        src="images/test.svg"
+                        figureNumber={3}
+                        figureDescription="Integer posuere erat a ante venenatis dapibus posuere velit aliquet"
                     />
                 );
                 break;

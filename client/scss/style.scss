@@ -123,6 +123,11 @@ blockquote {
     margin-bottom: 1.5em;
 }
 
+.svg-wrapper {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
 code,
 samp {
     font-size: 87.5%;
@@ -190,7 +195,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+.svg-wrapper {
     max-width: 30rem;
 }
 
@@ -231,6 +237,14 @@ p:last-of-type {
 #terminal {
     width: 100%;
     max-width: 480px;
+}
+
+svg {
+    width: 100%;
+}
+
+.isvg.loaded {
+    width: 100%;
 }
 
 table {
