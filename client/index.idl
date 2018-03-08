@@ -4,7 +4,7 @@
 
 [Page]
 
-    [Heading is:"h1"]
+    [Heading is:"h1" onEnterViewFully:`sidePanelView = "initial"`] 
         The Key to Authoring a Popular GitHub Repository
     [/Heading]
 
@@ -26,7 +26,7 @@
         [GitHubStar /]
     [/NotDesktop]
 
-    [Heading is:"h2" onEnterView:`sidePanelView = "initial"`]
+    [Heading is:"h2"  onEnterViewFully:`sidePanelView = "terminal"`]
         200,000 API requests
     [/Heading]
 
@@ -35,9 +35,14 @@
     [/Text]
 
     [Text]
-    Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper.[/Text]
+        Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper.
+    [/Text]
 
-    [Heading is:"h2" onEnterView:`sidePanelView = "flowchart"`]
+    [NotDesktop]
+        [Terminal /]
+    [/NotDesktop]
+
+    [Heading is:"h2"]
         Structuring the Information
     [/Heading]
 

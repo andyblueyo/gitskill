@@ -1,7 +1,9 @@
 import React from "react";
 
-const Text = ({ children }) => {
-    return <p>{children}</p>;
-};
+class Text extends React.Component {
+    render() {
+        return <p>{this.props.children}</p>;
+    }
+}
 
 export default Text;
