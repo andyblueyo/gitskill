@@ -107,15 +107,14 @@
     [/Text]
 
     [NotDesktop]
-        [Chart src:"images/predAct.svg" figureNumber:3 figureDescription:"Integer posuere erat a ante venenatis dapibus posuere velit aliquet" /]
-
+        [Image src:"images/predAct.png" figureNumber:42 figureDescription:"Test" /]
         [Image src:"images/predError.png" figureNumber:42 figureDescription:"Test" /]
     [/NotDesktop]
 
     [Text]
         Overall, it seems to be doable to predict the number of star a repo earns based on languages, lines of code, and number of past repos. We still have quite a ways to continue with refining our models, but we are excited to continue looking into other ways to optimize our data.
     [/Text]
-    
+
     [Monospace]
         git commit -m "fin"
     [/Monospace]
