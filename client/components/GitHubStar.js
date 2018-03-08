@@ -10,7 +10,7 @@ class GitHubStar extends React.Component {
     }
 
     componentDidMount() {
-        this.timerID = setInterval(() => this.tick(), 5000);
+        this.timerID = setInterval(() => this.tick(), 2000);
     }
 
     tick() {
@@ -56,7 +56,7 @@ class GitHubStar extends React.Component {
 // Inline styles because we don't need these styles anywhere else
 const gitHubStyles = {
     star: {
-        marginRight: "3px"
+        marginRight: "4px"
     },
     button: {
         display: "inline-flex",
@@ -67,7 +67,6 @@ const gitHubStyles = {
         lineHeight: 1,
         whiteSpace: "nowrap",
         verticalAlign: "middle",
-        cursor: "pointer",
         backgroundRepeat: "repeat-x",
         backgroundPosition: "-1px -1px",
         backgroundSize: "110% 110%",
