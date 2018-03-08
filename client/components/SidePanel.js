@@ -3,6 +3,7 @@ import React from "react";
 import Flex from "./Flex";
 import Blockquote from "./Blockquote";
 import GitHubStar from "./GitHubStar";
+import Terminal from "./Terminal";
 
 class SidePanel extends React.Component {
     render() {
@@ -22,12 +23,8 @@ class SidePanel extends React.Component {
                 );
                 break;
 
-            case 1:
-                content = <div />;
-                break;
-
-            case "flowchart":
-                content = <div>Another test</div>;
+            case "terminal":
+                content = <Terminal />;
                 break;
 
             default:
