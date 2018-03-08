@@ -11,14 +11,9 @@
         "d3": "^4.0.0",
         "gulp": "^3.9.1",
         "gulp-sass": "^3.1.0",
-<<<<<<< HEAD
-        "idyll": "^2.1.7",
-        "idyll-d3-component": "^2.0.0",
-        "moment": "^2.21.0"
-=======
         "idyll": "2.1.7",
-        "idyll-d3-component": "2.0.3"
->>>>>>> working client
+        "idyll-d3-component": "2.0.3",
+        "moment": "^2.21.0"
     },
     "devDependencies": {
         "gh-pages": "^0.12.0"
