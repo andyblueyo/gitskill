@@ -47,4 +47,4 @@ const applyStyles = (author, isFirst, isLast) => {
     );
 };
 
-module.exports = Subhead;
+export default Subhead;

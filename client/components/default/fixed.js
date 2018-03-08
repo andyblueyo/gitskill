@@ -1,13 +1,9 @@
-import React from 'react';
+import React from "react";
 
 class Fixed extends React.PureComponent {
-  render() {
-    return (
-      <div style={{position: 'fixed'}} className="fixed">
-        {this.props.children}
-      </div>
-    );
-  }
+    render() {
+        return <div className="fixed">{this.props.children}</div>;
+    }
 }
 
 export default Fixed;

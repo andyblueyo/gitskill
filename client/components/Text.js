@@ -4,4 +4,4 @@ const Text = ({ children }) => {
     return <p>{children}</p>;
 };
 
-module.exports = Text;
+export default Text;
