@@ -3117,12 +3117,6 @@ idyll-compiler@^2.1.1:
     nearley "^2.7.12"
     smartquotes "^2.0.0"
 
-idyll-component@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/idyll-component/-/idyll-component-1.2.2.tgz#0a314657839492a98f414e5763a564c275a62328"
-  dependencies:
-    scrollwatch "^1.2.0"
-
 idyll-components@^2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/idyll-components/-/idyll-components-2.1.6.tgz#bfc788252442149e5bce11b3a8d1aae80d4dcabf"
@@ -3138,7 +3132,7 @@ idyll-components@^2.1.6:
     react-table "^6.6.0"
     victory "^0.23.0"
 
-idyll-d3-component@^2.0.0:
+idyll-d3-component@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/idyll-d3-component/-/idyll-d3-component-2.0.3.tgz#79c4fbbbe5e5d59d9e61e16529b433923b6f6dfe"
 
@@ -3163,9 +3157,9 @@ idyll-themes@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/idyll-themes/-/idyll-themes-2.1.1.tgz#43a72f5f17ac92a667155762376183fa7655070c"
 
-idyll@^2.1.7:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/idyll/-/idyll-2.2.0.tgz#0746d7e94d5af64c9e88dedaf70f8e1d58865400"
+idyll@2.1.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/idyll/-/idyll-2.1.7.tgz#2bde19e1a39424f1d8baf2e5a647fe464583a31a"
   dependencies:
     babel-preset-env "^1.6.0"
     babel-preset-react "^6.22.0"
@@ -5263,10 +5257,6 @@ scrollmonitor@^1.2.3:
 scrollparent@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/scrollparent/-/scrollparent-2.0.1.tgz#715d5b9cc57760fb22bdccc3befb5bfe06b1a317"
-
-scrollwatch@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/scrollwatch/-/scrollwatch-1.2.0.tgz#3e6e15db4af7583354f407dbad45a9a58a94fb66"
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"
