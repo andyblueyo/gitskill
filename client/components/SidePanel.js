@@ -17,7 +17,7 @@ class SidePanel extends React.Component {
                 content = (
                     <div>
                         <Blockquote>
-                            Can we predict a GitHub repository's number of
+                            Can we predict a GitHub repository&#39;s number of
                             stars?
                         </Blockquote>
                         <GitHubStar />

@@ -5,16 +5,16 @@ import Caption from "./Caption";
 
 class TableComponent extends React.Component {
     componentDidMount() {
-        console.log(this.props.data);
+        // console.log(this.props.data);
     }
     render() {
         let thead = (
-            <tr>{this.props.columns.map(column => <th>{column}</th>)}</tr>
+            <tr>{this.props.columns.map((column, i) => <th key={`column_${i}`}>{column}</th>)}</tr>
         );
 
-        let tbody = this.props.data.map((row, i) => (
-            <tr>{_.map(row, value => <td>{value}</td>)}</tr>
-        ));
+        let tbody = this.props.data.map((row, i) => {
+            return (<tr key={`row_${i}`}>{_.map(row, (value, j) => <td key={`tableKey_${i}_${j}`}>{value}</td>)}</tr>)
+        });
 
         return (
             <div style={{ overflowX: "auto" }}>

@@ -33,7 +33,7 @@ const applyStyles = (author, isFirst, isLast) => {
     }
 
     return (
-        <span>
+        <span key={`author_${author.url}`}>
             {predecessor}
             <a
                 className="black bold sans-serif"

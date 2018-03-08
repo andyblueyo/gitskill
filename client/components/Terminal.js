@@ -35,6 +35,10 @@ class Terminal extends React.Component {
         this.timerID = setInterval(() => this.tick(), 1000);
     }
 
+    componentWillUnmount() {
+        this.setState(output: []);
+    }
+
     tick() {
         if (this.state.output.length !== 12) {
             this.setState({
@@ -52,8 +56,8 @@ class Terminal extends React.Component {
     }
 
     render() {
-        const formattedOutput = this.state.output.map(line => (
-            <div>{line}</div>
+        const formattedOutput = this.state.output.map((line, i) => (
+            <div key={`line_${i}`}>{line}</div>
         ));
 
         return (
