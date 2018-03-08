@@ -17,8 +17,8 @@ class TableComponent extends React.Component {
         ));
 
         return (
-            <div>
-                <div style={{ overflowX: "auto" }}>
+            <div style={{ overflowX: "auto" }}>
+                <div>
                     <table>
                         <thead>{thead}</thead>
                         <tbody>{tbody}</tbody>
