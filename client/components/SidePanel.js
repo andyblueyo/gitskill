@@ -50,7 +50,7 @@ class SidePanel extends React.Component {
                         ]}
                         data={this.props.prePrepData}
                         figureNumber={2}
-                        figureDescription="Ullamcorper nulla non metus auctor fringilla"
+                        figureDescription="Our structured data"
                     />
                 );
                 break;
@@ -59,8 +59,8 @@ class SidePanel extends React.Component {
                 content = (
                     <Image
                         src="images/langFrequency.png"
-                        figureNumber={42}
-                        figureDescription="Test"
+                        figureNumber={3}
+                        figureDescription="The top 10 most used languages"
                     />
                 );
                 break;
@@ -69,8 +69,8 @@ class SidePanel extends React.Component {
                 content = (
                     <Image
                         src="images/predAct.png"
-                        figureNumber={42}
-                        figureDescription="Test"
+                        figureNumber={4}
+                        figureDescription="Predicted stars versus actual stars"
                     />
                 );
                 break;
@@ -79,8 +79,8 @@ class SidePanel extends React.Component {
                 content = (
                     <Image
                         src="images/predError.png"
-                        figureNumber={42}
-                        figureDescription="Test"
+                        figureNumber={5}
+                        figureDescription="Prediction error versus actual stars"
                     />
                 );
                 break;
