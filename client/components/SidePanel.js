@@ -53,12 +53,22 @@ class SidePanel extends React.Component {
                 );
                 break;
 
-            case "test":
+            case "predAct":
                 content = (
                     <Chart
-                        src="images/test.svg"
+                        src="images/predAct.svg"
                         figureNumber={3}
                         figureDescription="Integer posuere erat a ante venenatis dapibus posuere velit aliquet"
+                    />
+                );
+                break;
+
+            case "predError":
+                content = (
+                    <Chart
+                        src="images/predError.svg"
+                        figureNumber={4}
+                        figureDescription="Morbi leo risus, porta ac consectetur ac, vestibulum at eros"
                     />
                 );
                 break;

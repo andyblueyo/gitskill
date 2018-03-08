@@ -15,9 +15,7 @@
         "idyll-component": "^1.2.2",
         "idyll-d3-component": "^2.0.0",
         "lodash": "^4.17.5",
-        "moment": "^2.21.0",
-        "reactable": "^0.14.1",
-        "svg-react-loader": "^0.4.5"
+        "moment": "^2.21.0"
     },
     "devDependencies": {
         "gh-pages": "^0.12.0"

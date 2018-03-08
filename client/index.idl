@@ -4,7 +4,6 @@
 [data name:"prePrepData" source:"prePrepData.json" /]
 
 [Page]
-
     [Heading is:"h1"] 
         The Key to Authoring a Popular GitHub Repository
     [/Heading]
@@ -59,11 +58,11 @@
         A Quick Glance at the Data
     [/Heading]
 
-    [Text onEnterViewFully:`sidePanelView = "test"`]
+    [Text onEnterViewFully:`sidePanelView = "predAct"`]
         Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     [/Text]
 
-    [Text]
+    [Text onEnterViewFully:`sidePanelView = "predError"`]
         Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.
     [/Text]
 
@@ -80,7 +79,9 @@
     [/Text]
 
     [NotDesktop]
-        [Chart src:"images/test.svg" figureNumber:3 figureDescription:"Integer posuere erat a ante venenatis dapibus posuere velit aliquet" /]
+        [Chart src:"images/predAct.svg" figureNumber:3 figureDescription:"Integer posuere erat a ante venenatis dapibus posuere velit aliquet" /]
+
+        [Chart src:"images/predError.svg" figureNumber:4 figureDescription:"Morbi leo risus, porta ac consectetur ac, vestibulum at eros" /]
     [/NotDesktop]
 
     [Heading is:"h2"]
@@ -104,6 +105,5 @@
             [SidePanel view:sidePanelView prePrepData:prePrepData /]
         [/Fixed]
     [/Desktop]
-
 [/Page]
 
