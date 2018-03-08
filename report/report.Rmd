@@ -1,0 +1,27 @@
+---
+title: "Report"
+author: "Evan Frawley, Vincent van der Meulen, Andrea Chen, Paul Vaden, Danish Bashar"
+date: "March 5, 2018"
+output:
+  pdf_document:
+    pandoc_args: [
+      "-V", "classoption=twocolumn"
+    ]
+---
+
+# Git Skill
+By Evan Frawley, Vincent van der Meulen, Andrea Chen, Paul Vaden, and Danish Bashar
+
+## Abstract
+
+## Introduction
+
+## Related Work
+
+## Methods
+
+## Results
+
+## Discussion
+
+## Future Work
