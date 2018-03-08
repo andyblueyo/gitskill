@@ -197,17 +197,6 @@ p:last-of-type {
     margin-bottom: 0;
 }
 
-.page {
-    margin-left: 10vw;
-}
-
-.fixed {
-    position: fixed;
-    top: 0;
-    width: 240px;
-    left: calc(10vw + 600px + 160px);
-}
-
 .flex {
     display: flex;
 }
@@ -238,8 +227,36 @@ p:last-of-type {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
     .hide-lg {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hide-xl {
+        display: none;
+    }
+
+    .idyll-root {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .page {
+        margin-left: 10vw;
+    }
+
+    .fixed {
+        position: fixed;
+        top: 0;
+        right: 10vw;
+        width: calc((80vw - 600px) - 120px);
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .fixed {
+        width: calc((80vw - 600px) - 144px);
     }
 }
