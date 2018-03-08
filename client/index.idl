@@ -1,11 +1,11 @@
-[meta title:"The Key to Authoring a Popular GitHub Repository" description:"Predicting a GitHub repository's stars based on its features" /]
+[meta title:"The Key to Having Meaningful Contributions to Github" description:"Predicting a GitHub repository's stars based on its features" /]
 
 [var name:"sidePanelView" value:"initial" /]
 [data name:"prePrepData" source:"prePrepData.json" /]
 
 [Page]
     [Heading is:"h1"] 
-        The Key to Authoring a Popular GitHub Repository
+        The Key to Having Meaningful Contributions to Github
     [/Heading]
 
     [Subhead authors:`[{ name: "Andrea Chen", url: "https://github.com/abchen" }, { name: "Danish Bashar", url: "https://github.com/NegativeRainbow" }, { name: "Evan Frawley", url: "https://github.com/evanfrawley" }, {  name: "Paul Vaden", url: "https://github.com/paulvaden" }, { name: "Vincent van der Meulen", url: "https://github.com/vincentmvdm"}]` /]   
