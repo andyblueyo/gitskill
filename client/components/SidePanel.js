@@ -2,6 +2,7 @@ import React from "react";
 
 import Flex from "./Flex";
 import Blockquote from "./Blockquote";
+import GitHubStar from "./GitHubStar";
 
 class SidePanel extends React.Component {
     render() {
@@ -11,9 +12,13 @@ class SidePanel extends React.Component {
         switch (view) {
             case "initial":
                 content = (
-                    <Blockquote>
-                        Can we predict a GitHub repository's number of stars?
-                    </Blockquote>
+                    <div>
+                        <Blockquote>
+                            Can we predict a GitHub repository's number of
+                            stars?
+                        </Blockquote>
+                        <GitHubStar />
+                    </div>
                 );
                 break;
 
