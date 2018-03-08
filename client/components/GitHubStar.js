@@ -83,6 +83,7 @@ const gitHubStyles = {
         borderRight: "1px solid rgba(27,31,35,0.2)"
     },
     rightSide: {
+        backgroundColor: "white",
         display: "flex",
         alignItems: "center",
         padding: "5px 10px"

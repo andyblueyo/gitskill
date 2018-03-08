@@ -91,6 +91,10 @@
         Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.
     [/Text]
 
+    [Monospace]
+        git commit -m "fin"
+    [/Monospace]
+
     [Desktop]
         [Fixed]
             [SidePanel view:sidePanelView prePrepData:prePrepData /]
@@ -98,3 +102,4 @@
     [/Desktop]
 
 [/Page]
+
