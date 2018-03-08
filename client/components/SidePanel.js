@@ -17,8 +17,9 @@ class SidePanel extends React.Component {
                 content = (
                     <div>
                         <Blockquote>
-                            Can we predict a GitHub repository&#39;s number of
-                            stars?
+                            Based on data from GitHub, are we able to predict
+                            the number of stars a repo from an organization or
+                            user can have?
                         </Blockquote>
                         <GitHubStar />
                     </div>

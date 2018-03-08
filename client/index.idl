@@ -11,31 +11,37 @@
     [Subhead authors:`[{ name: "Andrea Chen", url: "https://github.com/abchen" }, { name: "Danish Bashar", url: "https://github.com/NegativeRainbow" }, { name: "Evan Frawley", url: "https://github.com/evanfrawley" }, {  name: "Paul Vaden", url: "https://github.com/paulvaden" }, { name: "Vincent van der Meulen", url: "https://github.com/vincentmvdm"}]` /]   
 
     [Text]
-        Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+        GitHub is a great way to see work that has been shared in the community. Public repositories allow others to explore projects as well as view how the code is written. A popular metric of popularity for a project on GitHub are stars, where users can show support by marking repositories with a star. A star on a repository allow users to find this repository easier later, allows GitHub to recommend more similar repositories, and most importantly, increases the popularity of this repository for GitHub’s Explore page, where repositories are featured to the developer community. 
     [/Text]
 
     [Text]
-        Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+        Popular repositories matter because they allow developers to become more famous for their projects. Earning stars is held in high regard as it signifies that people appreciate the work and that they are interested in continuing to watch its progress. For developers, stars allow good work to be highlighted and exposed within the community. 
     [/Text]
 
+    [Text]
+        In this project, our team focused on exploring the possibilities of predicting number of stars. The defining questions and hypothesis are listed below.
+    [/Text]
+    
+    [List items:`["Based on data from GitHub, are we able to predict the number of stars a repo from an organization or user can have?", "Is there a relationship between features on GitHub and number of stars?"]` /]
+
     [NotDesktop]
-        [Blockquote]
-            Can we predict a GitHub repository's number of
-            stars?
-        [/Blockquote]
         [GitHubStar /]
     [/NotDesktop]
 
     [Heading is:"h2"]
-        200,000 API requests
+        250,000+ API Requests
     [/Heading]
 
     [Text]
-        Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        To collect our data, we used GitHub’s API. Over a span of a week, our team made 250,000 API requests to GitHub’s API service. This ensured that the data we were collecting about users and repositories stayed within our code of conduct with GitHub’s data usage. 
     [/Text]
 
     [Text onEnterViewFully:`sidePanelView = "terminal"`]
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper.
+        Our team member, Evan, wrote a script that would allow us to call data from the API using a Round Robin API token scraping method. 
+    [/Text]
+
+    [Text]
+        Afterwards, we stored our data in a Mongo database, since it would allow us to easily access the data. 
     [/Text]
 
     [NotDesktop]
@@ -47,7 +53,15 @@
     [/Heading]
 
     [Text onEnterViewFully:`sidePanelView = "prePrepData"`]
-        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
+       The data we had collected from GitHub’s API was stored in a Mongo Database for ease of storage and speed with being able to access the data. Because our team, largely did not know Mongo’s database well, Evan was able to also provide the JSON of the collected data. 
+    [/Text]
+
+    [Text]
+        Being able to access the data in a JSON format allowed our team to read in the JSON file, wrangle the data, and output a CSV we would use for our models. 
+    [/Text]
+
+    [Text]
+        Using R’s jsonlite library allowed us to read the JSON file, flatten the data, and unlist columns that contained multiple lists of data. For this project, our languages column in our repo.json file was a list that contained dataframe of two columns: language and lines. We used Hadley Wickham’s tidyr library, as well as our own private functions to reshape the data to create models and visualizations. 
     [/Text]
 
     [NotDesktop]
@@ -59,11 +73,25 @@
     [/Heading]
 
     [Text onEnterViewFully:`sidePanelView = "predAct"`]
-        Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Our dataset was relatively small compared to the number of public repos available on GitHub. However for this project, the size of our data was sufficient to suit our needs. Below are some quick numbers that shape our dataset. 
     [/Text]
 
-    [Text onEnterViewFully:`sidePanelView = "predError"`]
-        Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.
+    [List items:`["Around 316 coding languages represented, even unusual ones like Dogescript", "Around 157,807 repositories present in our data"]` /]
+
+    [Heading is:"h2"]
+        The Search for the Right Model
+    [/Heading]
+
+    [Text]
+        The results from data science are derived from our processes. One of the biggest challenges we ran into was wrangling the data into a format that we would be able to run our machine learning models on. This resulted in unlisting our nested columns such as language, merging repo and user data together, and reshaping our data. 
+    [/Text]
+
+    [Text]
+        To outline our process, we first had to define our research question, then wrangle the data into a shape that would work for us, then explore models, and finally measure how models performed. 
+    [/Text]
+
+    [Text]
+        One of the biggest challenge was doing the machine learning itself. Our team member, Paul, explored a wide variety of models such as K Nearest Neighbors and Linear Regression. Eventually, after tuning our parameters, we found the Random Forest Model to be one of our best performing models as seen from it’s scoring using the Negative Log Loss metric. Despite it performing well, at predicting how many stars a user or organizations repo would have, the actual numbers were still far estimates. Despite this our model still was a success, since it was able to predict at least within the ballpark of the actual star count. 
     [/Text]
 
     [Heading is:"h2"]
@@ -71,11 +99,11 @@
     [/Heading]
 
     [Text]
-        Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+        Although our models are still rough and need to be further refined, our outcomes, star count, from our best performing model, the Random Forest, was performing well enough to predict a star count that was within the ballpark of the actual star by at least a difference within a power of 10 for many of its cases. We also used GridSearchCV to find and determine the best parameters for our model. 
     [/Text]
 
     [Text]
-        Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere consectetur est at lobortis.
+        Overall, it seems to be doable to predict the number of star a repo earns based on languages, lines of code, and number of past repos. We still have quite a ways to continue with refining our models, but we are excited to continue looking into other ways to optimize our data.
     [/Text]
 
     [NotDesktop]
@@ -83,18 +111,6 @@
 
         [Chart src:"images/predError.svg" figureNumber:4 figureDescription:"Morbi leo risus, porta ac consectetur ac, vestibulum at eros" /]
     [/NotDesktop]
-
-    [Heading is:"h2"]
-        The Formula for Success
-    [/Heading]
-
-    [Text]
-        Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur.
-    [/Text]
-
-    [Text]
-        Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.
-    [/Text]
 
     [Monospace]
         git commit -m "fin"

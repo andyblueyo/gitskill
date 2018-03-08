@@ -116,10 +116,20 @@ h6 {
 p,
 dl,
 ol,
-ul,
 pre,
-blockquote {
+blockquote,
+ul {
     margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+ul li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+ul {
+    margin-top: 2em;
     margin-bottom: 1.5em;
 }
 
@@ -196,8 +206,17 @@ h4,
 h5,
 h6,
 p,
+ul,
 .svg-wrapper {
     max-width: 30rem;
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul li {
+    font-style: italic;
 }
 
 @media screen and (max-width: 64em) {
@@ -338,4 +357,8 @@ tbody tr:nth-child(odd) {
     .fixed {
         width: calc((80vw - 600px) - 144px);
     }
+}
+
+ul {
+    padding-left: 1rem;
 }
